@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-feup: #8c2d19;
+  --font-bebas: var(--font-bebas);
+  --font-arimo: var(--font-arimo);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

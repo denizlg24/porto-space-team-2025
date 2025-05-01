@@ -1,0 +1,33 @@
+{
+  "common": {
+    "headline": "We are ready for launch...",
+    "subtitle": "STUDENT POWER. Aerospace Engineering. REAL IMPACT.",
+    "nav-about": "about",
+    "nav-projects": "projects",
+    "nav-sponsors": "sponsors",
+    "nav-competitions": "competitions",
+    "nav-newsletter": "newsletter",
+    "nav-contact": "contact us",
+    "nav-join": "join us",
+    "about-us": "ABOUT US",
+    "about-us-p1": "We are an association made up of university students, from FEUP (Faculty of Engineering of the University of Porto).",
+    "about-us-p2": "Our mission is to produce meaningful research, while teaching aspiring engineers to become even better professionals.",
+    "about-us-p3": "Every day at Space Team is a new day where we try to push ourselves further, because we believe that challenge is the only way to create something groundbreaking, let it be a hybrid-propellant rocket, a nano satellite or the next generation of space pioneers.",
+    "know-more": "Know more",
+    "creation": "Creation",
+    "members": "Members",
+    "projects": "Projects",
+    "invictus": "INVICTUS",
+    "invictus-p1": "Invictus is our first project, where we aim to develop a hybrid propulsion model rocket to participate in EuRoC, with an apogee of 3000 meters, in the SRAD category.",
+    "invictus-p2": "In 2024 we made history, by becoming the first student team in Portugal to successfully conduct a hybrid propulsion system test.",
+    "plutus": "Plutus",
+    "plutus-p1": "PLUTUS is an educational outreach project where we collaborate with schools in Porto to teach students about rocketry.",
+    "plutus-p2": "Together, we build a rocket model that will be launched, fostering the development of future aerospace engineers.",
+    "icarus": "ICARUS",
+    "icarus-p1": "ICARUS project focuses on the development of a 1U nanosatellite, in collaboration with INEGI, as part of our participation in the CubeSat Portugal program.",
+    "icarus-p2": "Its primary mission is to foster the personal growth of its members, with a special focus on technical development in the field of satellite design.",
+    "sponsors": "sponsors",
+    "gold-sponsors": "GOLD SPONSORS",
+    "more": "More"
+  }
+}
