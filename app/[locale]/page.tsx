@@ -1,23 +1,27 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import bg from "@/public/Capa.jpg";
+
 export default function Home() {
   const t = useTranslations("common");
   return (
-    <main className="w-full h-screen flex relative">
-      <div className="w-full absolute top-2/7 flex flex-col gap-0.5 items-center p-1 z-99">
-        <h1 className="uppercase w-full text-center text-feup text-8xl font-bebas">
+    <main className="w-full md:h-[calc(66vh)] h-[calc(33vh)] lg:h-screen min-h-[375px] md:min-h-[550px] lg:min-h-screen flex relative">
+      <div className="w-full absolute top-2/7 flex flex-col gap-0.5 items-center p-1 z-10">
+        <h1 className="uppercase w-full text-center text-feup lg:text-8xl md:text-6xl text-2xl font-bebas drop-shadow-2xl">
           {t("headline")}
         </h1>
-        <h2 className="uppercase w-full text-center text-feup text-4xl font-bebas">
+        <h2 className="uppercase w-full text-center text-feup lg:text-4xl md:text-2xl text-md text font-bebas drop-shadow-2xl">
           {t("subtitle")}
         </h2>
       </div>
 
       <Image
-        src="/Capa.jpg"
+        src={bg}
         alt="cover photo"
         fill
-        sizes="(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 300vw"
+        placeholder="blur"
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
         className="w-full h-auto object-cover"
       />
     </main>

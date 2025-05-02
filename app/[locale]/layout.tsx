@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
 import { Bebas_Neue, Arimo } from "next/font/google";
+import Header from "@/components/Header";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -50,6 +51,7 @@ export default async function RootLayout({ children, params }: Props) {
     <html lang={locale}>
       <body className={`antialiased ${bebas.variable} ${arimo.variable}`}>
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
         </NextIntlClientProvider>
       </body>
