@@ -15,6 +15,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import Hamburger from "hamburger-react";
 import { FaLinkedin, FaInstagram, FaFacebookSquare } from "react-icons/fa";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Header() {
   const t = useTranslations("common");
@@ -34,7 +35,7 @@ export default function Header() {
           className="lg:h-16 md:h-14 h-10 w-auto"
         />
       </Link>
-      <NavigationMenu className="flex items-center translate-y-1">
+      <NavigationMenu className="flex items-center translate-y-0.5">
         <NavigationMenuList>
           <NavigationMenuItem className="uppercase md:flex hidden">
             <NavigationMenuLink
@@ -77,7 +78,10 @@ export default function Header() {
               {t("nav-sponsors")}
             </NavigationMenuLink>
           </NavigationMenuItem>
-          <NavigationMenuItem className="-translate-y-1 relative">
+          <NavigationMenuItem>
+            <LocaleSwitcher />
+          </NavigationMenuItem>
+          <NavigationMenuItem className="-translate-y-0.5 relative">
             <Hamburger
               size={36}
               toggled={isOpen}
