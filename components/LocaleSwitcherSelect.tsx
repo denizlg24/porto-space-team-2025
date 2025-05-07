@@ -26,20 +26,29 @@ export default function LocaleSwitcherSelect({ defaultValue }: Props) {
   }, [currentLocale]);
 
   return (
-    <select
-      value={currentLocale}
+    <button
       disabled={isPending}
-      onChange={(e) => {
-        updateLocale(e.target.value);
+      className="flex flex-col items-center justify-center h-full -translate-y-0.5 hover:cursor-pointer"
+      onClick={() => {
+        updateLocale((prev) => (prev == "en" ? "pt" : "en"));
       }}
-      className="inline-flex w-full bg-transparent appearance-none py-1 pl-2 pr-2  focus:border-none! focus:outline-0! focus:ring-0! text-white font-bebas text-3xl"
     >
-      <option value="en" className="text-xl text-feup">
-        EN
-      </option>
-      <option value="pt" className="text-xl text-feup">
-        PT
-      </option>
-    </select>
+      {currentLocale == "en" && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src="/gb.png"
+          alt={currentLocale}
+          className="h-auto w-8 aspect-square rounded-full object-cover"
+        ></img>
+      )}
+      {currentLocale == "pt" && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src="/pt.png"
+          alt={currentLocale}
+          className="h-auto w-8 aspect-square rounded-full object-cover"
+        ></img>
+      )}
+    </button>
   );
 }

@@ -12,7 +12,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hamburger from "hamburger-react";
 import { FaLinkedin, FaInstagram, FaFacebookSquare } from "react-icons/fa";
 import LocaleSwitcher from "./LocaleSwitcher";
@@ -20,8 +20,26 @@ import LocaleSwitcher from "./LocaleSwitcher";
 export default function Header() {
   const t = useTranslations("common");
   const [isOpen, setOpen] = useState(false);
+  const [isPageScrolled, setIsPageScrolled] = useState(false);
+
+  useEffect(() => {
+    const checkScroll = () => {
+      setIsPageScrolled(window.scrollY !== 0);
+      console.log(window.scrollY);
+    };
+    window.addEventListener("scroll", checkScroll);
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, [isPageScrolled]);
+
   return (
-    <header className="flex fixed top-0 z-99 flex-row items-center justify-between p-2 sm:p-4 drop-shadow-2xl w-full">
+    <header
+      className={`flex fixed top-0 z-99 flex-row items-center justify-between p-2 drop-shadow-2xl w-full ${
+        isPageScrolled ? "backdrop-blur-3xl" : ""
+      }`}
+    >
       <Link
         href="/"
         className="flex flex-col items-center justify-center w-fit"
@@ -35,18 +53,18 @@ export default function Header() {
           className="lg:h-16 md:h-14 h-10 w-auto"
         />
       </Link>
-      <NavigationMenu className="flex items-center translate-y-0.5">
+      <NavigationMenu className="flex items-center">
         <NavigationMenuList>
           <NavigationMenuItem className="uppercase md:flex hidden">
             <NavigationMenuLink
               href="/about"
-              className="bg-transparent! text-white font-bebas text-4xl"
+              className="bg-transparent! text-white font-bebas text-4xl  translate-y-0.5"
             >
               {t("nav-about")}
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem className="uppercase md:flex hidden">
-            <NavigationMenuTrigger className="uppercase h-full bg-transparent! text-white font-bebas text-4xl">
+            <NavigationMenuTrigger className="uppercase p-2 h-full bg-transparent! text-white font-bebas text-4xl translate-y-0.5">
               {t("nav-projects")}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="uppercase flex w-full flex-col items-stretch min-w-[250px]">
@@ -72,16 +90,16 @@ export default function Header() {
           </NavigationMenuItem>
           <NavigationMenuItem className="uppercase items-center justify-center md:flex hidden">
             <NavigationMenuLink
-              className="bg-transparent! text-white font-bebas text-4xl"
+              className="bg-transparent! text-white font-bebas text-4xl  translate-y-0.5"
               href="/sponsors"
             >
               {t("nav-sponsors")}
             </NavigationMenuLink>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          <NavigationMenuItem className=" translate-y-0.5">
             <LocaleSwitcher />
           </NavigationMenuItem>
-          <NavigationMenuItem className="-translate-y-0.5 relative">
+          <NavigationMenuItem className="relative">
             <Hamburger
               size={36}
               toggled={isOpen}
