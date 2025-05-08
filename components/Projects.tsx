@@ -16,7 +16,7 @@ export default function Page() {
           logoClassName="-rotate-48"
           learnMoreHref="/projects/invictus"
           learnMore={t("more")}
-          bgSrc="/INVICTUS.PNG"
+          bgSrc="/INVICTUS.png"
           bgClassName="object-[0%_60%]"
           logoSrc="/project/INVICTUS.svg"
         />
@@ -26,7 +26,7 @@ export default function Page() {
           p2={t("plutus-p2")}
           learnMoreHref="/projects/plutus"
           learnMore={t("more")}
-          bgSrc="/PLUTUS.PNG"
+          bgSrc="/PLUTUS.png"
           bgClassName="object-[0%_50%]"
           logoSrc="/project/PLUTUS.png"
         />
