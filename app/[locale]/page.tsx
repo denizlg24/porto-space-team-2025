@@ -2,6 +2,9 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import bg from "@/public/Capa.jpg";
 import AboutUs from "@/components/AboutUs";
+import CountingSection from "@/components/CountingSection";
+import Projects from "@/components/Projects";
+
 export default function Home() {
   const t = useTranslations("common");
   return (
@@ -23,10 +26,12 @@ export default function Home() {
           placeholder="blur"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover object-[0%_80%]"
         />
       </div>
       <AboutUs />
+      <CountingSection />
+      <Projects />
     </main>
   );
 }

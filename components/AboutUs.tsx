@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <section className="md:grid flex flex-col grid-cols-2 w-full max-w-7xl sm:text-lg text-base py-4">
       <div className="col-span-1 w-full h-full flex flex-col items-start gap-4 font-arimo px-4 md:py-12 py-4">
-        <h1 className="w-full text-left text-feup text-4xl font-bebas">
+        <h1 className="w-full text-left text-feup lg:text-4xl md:text-3xl text-2xl font-bebas">
           {t("about-us")}
         </h1>
         <p>{t("about-us-p1")}</p>

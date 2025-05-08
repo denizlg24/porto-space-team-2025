@@ -36,8 +36,8 @@ export default function Header() {
 
   return (
     <header
-      className={`flex fixed top-0 z-99 flex-row items-center justify-between p-2 drop-shadow-2xl w-full ${
-        isPageScrolled ? "backdrop-blur-3xl" : ""
+      className={`flex fixed top-0 z-99 flex-row items-center justify-between p-2 drop-shadow-2xl w-full transition-all ${
+        isPageScrolled ? " bg-feup/25 backdrop-blur-3xl" : ""
       }`}
     >
       <Link
@@ -100,12 +100,22 @@ export default function Header() {
             <LocaleSwitcher />
           </NavigationMenuItem>
           <NavigationMenuItem className="relative">
-            <Hamburger
-              size={36}
-              toggled={isOpen}
-              toggle={setOpen}
-              color={isOpen ? "#8c2d19" : "#ffffff"}
-            />
+            <div className="w-full h-full sm:flex hidden items-center justify-center">
+              <Hamburger
+                size={32}
+                toggled={isOpen}
+                toggle={setOpen}
+                color={isOpen ? "#8c2d19" : "#ffffff"}
+              />
+            </div>
+            <div className="w-full h-full sm:hidden flex items-center justify-center">
+              <Hamburger
+                size={16}
+                toggled={isOpen}
+                toggle={setOpen}
+                color={isOpen ? "#8c2d19" : "#ffffff"}
+              />
+            </div>
             {isOpen && (
               <div className="absolute bg-background w-[250px] flex flex-col gap-0.5 items-center p-2 right-1 z-99 rounded">
                 <NavigationMenuLink
