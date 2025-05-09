@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import Hamburger from "hamburger-react";
 import { FaLinkedin, FaInstagram, FaFacebookSquare } from "react-icons/fa";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const t = useTranslations("common");
@@ -116,72 +117,81 @@ export default function Header() {
                 color={isOpen ? "#8c2d19" : "#ffffff"}
               />
             </div>
-            {isOpen && (
-              <div className="absolute bg-background w-[250px] flex flex-col gap-0.5 items-center p-2 right-1 z-99 rounded">
-                <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
-                  href="/about"
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  key="mobile-menu"
+                  initial={{ opacity: 0, y: -50, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -50, scale: 0.95 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="absolute bg-background w-[250px] flex flex-col gap-0.5 items-center p-2 right-1 z-99 rounded"
                 >
-                  {t("nav-about")}
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
-                  href="/projects"
-                >
-                  {t("nav-projects")}
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
-                  href="/sponsors"
-                >
-                  {t("nav-sponsors")}
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center"
-                  href="/projects/icarus"
-                >
-                  {t("nav-competitions")}
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center"
-                  href="/projects/icarus"
-                >
-                  {t("nav-newsletter")}
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center"
-                  href="/projects/icarus"
-                >
-                  {t("nav-contact")}
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  className=" text-white font-bebas bg-feup text-2xl w-full text-center"
-                  href="/projects/icarus"
-                >
-                  {t("nav-join")}
-                </NavigationMenuLink>
-                <div className="grid grid-cols-3 w-[150px] gap-4 px-4 mt-2 ">
-                  <a
-                    href="https://www.linkedin.com/company/porto-space-team"
-                    target="_blank"
+                  <NavigationMenuLink
+                    className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
+                    href="/about"
                   >
-                    <FaLinkedin className="text-feup col-span-1 w-full h-auto aspect-square" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/portospaceteam/"
-                    target="_blank"
+                    {t("nav-about")}
+                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
+                    href="/projects"
                   >
-                    <FaInstagram className="text-feup col-span-1 w-full h-auto aspect-square" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/portospaceteam"
-                    target="_blank"
+                    {t("nav-projects")}
+                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
+                    href="/sponsors"
                   >
-                    <FaFacebookSquare className="text-feup col-span-1 w-full h-auto aspect-square" />
-                  </a>
-                </div>
-              </div>
-            )}
+                    {t("nav-sponsors")}
+                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    className=" text-feup font-bebas text-2xl w-full text-center"
+                    href="/projects/icarus"
+                  >
+                    {t("nav-competitions")}
+                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    className=" text-feup font-bebas text-2xl w-full text-center"
+                    href="/projects/icarus"
+                  >
+                    {t("nav-newsletter")}
+                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    className=" text-feup font-bebas text-2xl w-full text-center"
+                    href="/projects/icarus"
+                  >
+                    {t("nav-contact")}
+                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    className=" text-white font-bebas bg-feup text-2xl w-full text-center"
+                    href="/projects/icarus"
+                  >
+                    {t("nav-join")}
+                  </NavigationMenuLink>
+                  <div className="grid grid-cols-3 w-[150px] gap-4 px-4 mt-2 ">
+                    <a
+                      href="https://www.linkedin.com/company/porto-space-team"
+                      target="_blank"
+                    >
+                      <FaLinkedin className="text-feup col-span-1 w-full h-auto aspect-square" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/portospaceteam/"
+                      target="_blank"
+                    >
+                      <FaInstagram className="text-feup col-span-1 w-full h-auto aspect-square" />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/portospaceteam"
+                      target="_blank"
+                    >
+                      <FaFacebookSquare className="text-feup col-span-1 w-full h-auto aspect-square" />
+                    </a>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

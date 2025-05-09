@@ -4,6 +4,7 @@ import bg from "@/public/Capa.jpg";
 import AboutUs from "@/components/AboutUs";
 import CountingSection from "@/components/CountingSection";
 import Projects from "@/components/Projects";
+import SponsorsSection from "@/components/SponsorsSection";
 
 export default function Home() {
   const t = useTranslations("common");
@@ -26,12 +27,13 @@ export default function Home() {
           placeholder="blur"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
-          className="w-full h-auto object-cover object-[0%_80%]"
+          className="w-full h-auto object-cover object-[0%_75%]"
         />
       </div>
       <AboutUs />
       <CountingSection />
       <Projects />
+      <SponsorsSection />
     </main>
   );
 }

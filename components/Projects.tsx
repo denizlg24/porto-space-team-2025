@@ -15,7 +15,7 @@ export default function Page() {
           p2={t("invictus-p2")}
           logoClassName="-rotate-48"
           learnMoreHref="/projects/invictus"
-          learnMore={t("more")}
+          learnMore={t("learn-more")}
           bgSrc="/INVICTUS.png"
           bgClassName="object-[0%_60%]"
           logoSrc="/project/INVICTUS.svg"
@@ -25,7 +25,7 @@ export default function Page() {
           p1={t("plutus-p1")}
           p2={t("plutus-p2")}
           learnMoreHref="/projects/plutus"
-          learnMore={t("more")}
+          learnMore={t("learn-more")}
           bgSrc="/PLUTUS.png"
           bgClassName="object-[0%_50%]"
           logoSrc="/project/PLUTUS.png"
@@ -35,7 +35,7 @@ export default function Page() {
           p1={t("icarus-p1")}
           p2={t("icarus-p2")}
           learnMoreHref="/projects/icarus"
-          learnMore={t("more")}
+          learnMore={t("learn-more")}
           bgSrc="/ICARUS.jpg"
           bgClassName="object-[0%_0%]"
           logoSrc="/project/ICARUS.svg"
