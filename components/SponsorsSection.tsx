@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Sponsors() {
   const t = useTranslations("common");
   return (
-    <section className="w-full flex flex-col items-center p-4 pt-8 sm:gap-16 gap-8 mt-16">
+    <section className="w-full flex flex-col items-center p-4 pt-8 sm:gap-16 gap-0 mt-16">
       <div className="flex flex-col w-full max-w-md text-center gap-1">
         <h1 className="font-bebas md:text-7xl text-5xl text-feup uppercase">
           {t("sponsors")}
@@ -15,7 +15,7 @@ export default function Sponsors() {
           {t("gold-sponsors")}
         </h2>
       </div>
-      <div className="relative flex justify-center w-full max-w-lg h-24">
+      <div className="relative flex justify-center w-[80%] max-w-xs h-24">
         <Image
           src="/sponsors/gold/Inegi.svg"
           alt="Inegi Icon"
@@ -23,8 +23,8 @@ export default function Sponsors() {
           className="object-contain"
         />
       </div>
-      <div className="flex lg:flex-row flex-col sm:gap-16 gap-8 items-center justify-center w-full">
-        <div className="relative flex justify-center w-full lg:flex-1 max-w-lg h-32">
+      <div className="flex md:flex-row flex-col sm:gap-16 gap-0 items-center justify-center w-[80%]">
+        <div className="relative flex justify-center w-full lg:flex-1 max-w-xs h-32">
           <Image
             src="/sponsors/gold/Orion.svg"
             alt="Orion Icon"
@@ -32,7 +32,7 @@ export default function Sponsors() {
             className="object-contain"
           />
         </div>
-        <div className="relative flex justify-center w-full lg:flex-1 max-w-lg h-32">
+        <div className="relative flex justify-center w-full lg:flex-1 max-w-xs h-32">
           <Image
             src="/sponsors/gold/Moldecar.svg"
             alt="Moldecar Icon"
