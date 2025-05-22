@@ -24,7 +24,6 @@ export default function Home() {
           src={bg}
           alt="cover photo"
           fill
-          placeholder="blur"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
           className="w-full h-auto object-cover object-[50%_75%]"

@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import bg from "@/public/sponsors/Fundo azul.png";
 import invictus from "@/public/project/INVICTUS.svg";
 import { Metadata } from "next";
 
@@ -31,10 +30,9 @@ export default function Page() {
           </h2>
         </div>
         <Image
-          src={bg}
+          src={"/sponsors/Fundo azul.png"}
           alt="cover photo"
           fill
-          placeholder="blur"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
           className="w-full h-auto object-cover object-[0%_75%] brightness-50"
