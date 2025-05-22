@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import bg from "@/public/sponsors/Fundo_azul.png";
 import invictus from "@/public/project/INVICTUS.svg";
 import { Metadata } from "next";
 
@@ -30,7 +31,7 @@ export default function Page() {
           </h2>
         </div>
         <Image
-          src={"/sponsors/Fundo azul.png"}
+          src={bg}
           alt="cover photo"
           fill
           priority
