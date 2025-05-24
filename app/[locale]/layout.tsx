@@ -50,7 +50,9 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={`antialiased ${bebas.variable} ${arimo.variable}`}>
+      <body
+        className={`antialiased ${bebas.variable} ${arimo.variable} min-h-screen relative`}
+      >
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

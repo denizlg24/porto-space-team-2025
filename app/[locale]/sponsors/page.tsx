@@ -21,7 +21,7 @@ export default function Page() {
   const t = useTranslations("common");
   return (
     <main className="w-full flex flex-col items-center">
-      <div className="md:h-[calc(66vh)] h-[calc(33vh)] lg:h-screen min-h-[375px] md:min-h-[550px] lg:min-h-screen flex items-center justify-center relative w-full">
+      <div className="md:h-[calc(66vh)] h-[calc(33vh)] min-h-[375px] md:min-h-[550px] flex items-center justify-center relative w-full">
         <div className="w-full absolute flex sm:flex-row flex-col items-center justify-between p-1 z-10 max-w-7xl gap-4 sm:px-12 px-8">
           <h1 className="uppercase w-full text-left text-white lg:text-8xl sm:text-6xl text-4xl font-bebas drop-shadow-2xl">
             {t("our")} <br className="sm:block hidden" /> {t("sponsors")}
@@ -36,7 +36,7 @@ export default function Page() {
           fill
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
-          className="w-full h-auto object-cover object-[0%_75%] brightness-50"
+          className="w-full h-auto object-cover object-[50%_50%] brightness-50"
         />
       </div>
       <div className="flex flex-col items-center w-full">

@@ -59,13 +59,13 @@ export default function Header() {
           <NavigationMenuItem className="uppercase md:flex hidden">
             <NavigationMenuLink
               href="/about"
-              className="bg-transparent! text-white font-bebas text-4xl  translate-y-0.5"
+              className="bg-transparent! text-white font-bebas text-4xl translate-y-0.5 hover:text-feup!"
             >
               {t("nav-about")}
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem className="uppercase md:flex hidden">
-            <NavigationMenuTrigger className="uppercase p-2 h-full bg-transparent! text-white font-bebas text-4xl translate-y-0.5">
+            <NavigationMenuTrigger className="uppercase p-2 h-full bg-transparent! text-white font-bebas text-4xl translate-y-0.5 hover:text-feup! data-[state=open]:text-feup!">
               {t("nav-projects")}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="uppercase flex w-full flex-col items-stretch min-w-[250px]">
@@ -91,7 +91,7 @@ export default function Header() {
           </NavigationMenuItem>
           <NavigationMenuItem className="uppercase items-center justify-center md:flex hidden">
             <NavigationMenuLink
-              className="bg-transparent! text-white font-bebas text-4xl  translate-y-0.5"
+              className="bg-transparent! text-white font-bebas text-4xl translate-y-0.5 hover:text-feup!"
               href="/sponsors"
             >
               {t("nav-sponsors")}
@@ -147,25 +147,25 @@ export default function Header() {
                   </NavigationMenuLink>
                   <NavigationMenuLink
                     className=" text-feup font-bebas text-2xl w-full text-center"
-                    href="/projects/icarus"
+                    href="/competitions"
                   >
                     {t("nav-competitions")}
                   </NavigationMenuLink>
                   <NavigationMenuLink
                     className=" text-feup font-bebas text-2xl w-full text-center"
-                    href="/projects/icarus"
+                    href="/newsletter"
                   >
                     {t("nav-newsletter")}
                   </NavigationMenuLink>
                   <NavigationMenuLink
                     className=" text-feup font-bebas text-2xl w-full text-center"
-                    href="/projects/icarus"
+                    href="/contact"
                   >
                     {t("nav-contact")}
                   </NavigationMenuLink>
                   <NavigationMenuLink
                     className=" text-white font-bebas bg-feup text-2xl w-full text-center"
-                    href="/projects/icarus"
+                    href="/join"
                   >
                     {t("nav-join")}
                   </NavigationMenuLink>

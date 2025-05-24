@@ -42,7 +42,7 @@ export default function Sponsors() {
         </div>
       </div>
       <Link
-        className="w-full max-w-3xs text-center px-4 py-1 border-4 border-feup text-feup font-bebas text-xl hover:border-transparent hover:cursor-pointer hover:bg-feup hover:text-white transition-colors rounded"
+        className="w-full max-w-3xs text-center px-4 py-1 border-4 sm:mt-0 mt-6 border-feup text-feup font-bebas text-xl hover:border-transparent hover:cursor-pointer hover:bg-feup hover:text-white transition-colors rounded"
         href="/sponsors"
       >
         {t("more")}
