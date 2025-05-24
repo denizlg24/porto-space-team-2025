@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import bg from "@/public/contact/Fundo_azul.png";
+import bg from "@/public/contact/Fundo_Azul.png";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
