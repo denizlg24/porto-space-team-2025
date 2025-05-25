@@ -38,7 +38,7 @@ export default function LocaleSwitcherSelect({ defaultValue }: Props) {
         <img
           src="/gb.png"
           alt={currentLocale}
-          className="h-auto md:w-8 w-6 aspect-square rounded-full object-cover"
+          className="h-auto w-6 aspect-square rounded-full object-cover"
         ></img>
       )}
       {currentLocale == "pt" && (
@@ -46,7 +46,7 @@ export default function LocaleSwitcherSelect({ defaultValue }: Props) {
         <img
           src="/pt.png"
           alt={currentLocale}
-          className="h-auto md:w-8 w-6 aspect-square rounded-full object-cover"
+          className="h-auto w-6 aspect-square rounded-full object-cover"
         ></img>
       )}
     </button>

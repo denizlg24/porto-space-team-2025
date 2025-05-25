@@ -36,6 +36,21 @@
     "more": "More",
     "contacts": "Contacts",
     "our": "OUR",
-    "sponsor-subtitle": "Porto Space Team would not be able to develop its projects without the incredible support from industry and university. We are deeply grateful to our partners for the many ways in which they help bring our mission to life"
+    "sponsor-subtitle": "Porto Space Team would not be able to develop its projects without the incredible support from industry and university. We are deeply grateful to our partners for the many ways in which they help bring our mission to life",
+    "contact-name": "Your Name",
+    "contact-company": "Company",
+    "contact-email": "Your Email",
+    "contact-subject": "Subject",
+    "contact-message": "Message",
+    "contact-send": "Send",
+    "contact-name-error": "Name must be not be empty",
+    "contact-email-error": "Must be a valid email address",
+    "contact-subject-error": "Subject must be something",
+    "contact-message-small-error": "Message must be something",
+    "contact-message-long-error": "Message can not be longer than 500 characters.",
+    "contact-success-title": "Thanks for reaching out!",
+    "contact-success-description": "We'll swiftly respond to your contact.",
+    "contact-error-title": "Whoops, we're sorry!",
+    "contact-error-description": "An error occurred while sending the message. Try again later please!"
   }
 }

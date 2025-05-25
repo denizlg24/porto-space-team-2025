@@ -51,7 +51,7 @@ export default function Header() {
           height={202}
           priority
           alt="Porto Space Team Logo"
-          className="lg:h-16 md:h-14 h-10 w-auto"
+          className="md:h-14 h-10 w-auto"
         />
       </Link>
       <NavigationMenu className="flex items-center">
@@ -59,13 +59,13 @@ export default function Header() {
           <NavigationMenuItem className="uppercase md:flex hidden">
             <NavigationMenuLink
               href="/about"
-              className="bg-transparent! text-white font-bebas text-4xl translate-y-0.5 hover:text-feup!"
+              className="bg-transparent! text-white font-bebas text-3xl translate-y-0.5 hover:text-feup!"
             >
               {t("nav-about")}
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem className="uppercase md:flex hidden">
-            <NavigationMenuTrigger className="uppercase p-2 h-full bg-transparent! text-white font-bebas text-4xl translate-y-0.5 hover:text-feup! data-[state=open]:text-feup!">
+            <NavigationMenuTrigger className="uppercase p-2 h-full bg-transparent! text-white font-bebas text-3xl translate-y-0.5 hover:text-feup! data-[state=open]:text-feup!">
               {t("nav-projects")}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="uppercase flex w-full flex-col items-stretch min-w-[250px]">
@@ -91,7 +91,7 @@ export default function Header() {
           </NavigationMenuItem>
           <NavigationMenuItem className="uppercase items-center justify-center md:flex hidden">
             <NavigationMenuLink
-              className="bg-transparent! text-white font-bebas text-4xl translate-y-0.5 hover:text-feup!"
+              className="bg-transparent! text-white font-bebas text-3xl translate-y-0.5 hover:text-feup!"
               href="/sponsors"
             >
               {t("nav-sponsors")}
@@ -101,15 +101,15 @@ export default function Header() {
             <LocaleSwitcher />
           </NavigationMenuItem>
           <NavigationMenuItem className="relative">
-            <div className="w-full h-full sm:flex hidden items-center justify-center">
+            <div className="w-full h-full md:flex hidden items-center justify-center">
               <Hamburger
-                size={32}
+                size={24}
                 toggled={isOpen}
                 toggle={setOpen}
                 color={isOpen ? "#8c2d19" : "#ffffff"}
               />
             </div>
-            <div className="w-full h-full sm:hidden flex items-center justify-center">
+            <div className="w-full h-full md:hidden flex items-center justify-center">
               <Hamburger
                 size={16}
                 toggled={isOpen}

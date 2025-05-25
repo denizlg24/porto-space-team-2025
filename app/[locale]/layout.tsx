@@ -5,7 +5,7 @@ import { getMessages } from "next-intl/server";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-
+import { Toaster } from "@/components/ui/sonner";
 import { Bebas_Neue, Arimo } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -51,12 +51,13 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`antialiased ${bebas.variable} ${arimo.variable} min-h-screen relative`}
+        className={`antialiased ${bebas.variable} ${arimo.variable} min-h-screen`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
           <Footer />
+          <Toaster theme="light" />
         </NextIntlClientProvider>
       </body>
     </html>

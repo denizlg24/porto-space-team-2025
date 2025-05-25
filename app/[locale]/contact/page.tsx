@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import bg from "@/public/contact/Fundo_Azul.png";
 import { Metadata } from "next";
+import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Porto Space Team | About",
@@ -34,6 +35,9 @@ export default function Page() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
           className="w-full h-auto object-cover object-[50%_10%] brightness-50"
         />
+      </div>
+      <div className="flex flex-col w-full max-w-3xl items-center py-12 px-4">
+        <ContactForm />
       </div>
     </main>
   );

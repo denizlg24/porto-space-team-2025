@@ -36,6 +36,21 @@
     "more": "Mais",
     "contacts": "Contactos",
     "our": "NOSSOS",
-    "sponsor-subtitle": "A Porto Space Team não seria capaz de desenvolver os seus projetos sem o incrível apoio da indústria e da universidade. Somos profundamente gratos aos nossos parceiros pelas inúmeras maneiras pelas quais nos ajudam a concretizar nossa missão."
+    "sponsor-subtitle": "A Porto Space Team não seria capaz de desenvolver os seus projetos sem o incrível apoio da indústria e da universidade. Somos profundamente gratos aos nossos parceiros pelas inúmeras maneiras pelas quais nos ajudam a concretizar nossa missão.",
+    "contact-name": "Seu Nome",
+    "contact-company": "Empresa",
+    "contact-email": "Seu Email",
+    "contact-subject": "Assunto",
+    "contact-message": "Mensagem",
+    "contact-send": "Enviar",
+    "contact-name-error": "O nome não pode estar vazio",
+    "contact-email-error": "Tem de se ser um email válido",
+    "contact-subject-error": "O assunto não podes estar vazio",
+    "contact-message-small-error": "A mensagem não pode estar vazia",
+    "contact-message-long-error": "A mensagem não pode ser maior de 500 caracteres",
+    "contact-success-title": "Obrigado por nos contactar",
+    "contact-success-description": "Vamos brevemente responder!",
+    "contact-error-title": "Whoops, pedimos desculpa!",
+    "contact-error-description": "Um erro ao enviar a mensagem. Por favor tente de novo mais tarde!"
   }
 }
