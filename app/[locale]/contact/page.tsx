@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Porto Space Team | About",
+  title: "Porto Space Team | Contact",
   description:
     "Discover Porto Space Team, a student-led aerospace association at FEUP, pioneering hybrid-propellant rocket development and space research in Portugal.",
   keywords: [
