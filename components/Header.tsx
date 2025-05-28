@@ -17,11 +17,14 @@ import Hamburger from "hamburger-react";
 import { FaLinkedin, FaInstagram, FaFacebookSquare } from "react-icons/fa";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 export default function Header() {
   const t = useTranslations("common");
   const [isOpen, setOpen] = useState(false);
   const [isPageScrolled, setIsPageScrolled] = useState(false);
+  const [isHamburgerProjectsToggled, setIsHamburgerProjectsToggled] =
+    useState(false);
 
   useEffect(() => {
     const checkScroll = () => {
@@ -133,11 +136,61 @@ export default function Header() {
                     {t("nav-about")}
                   </NavigationMenuLink>
                   <NavigationMenuLink
-                    className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
+                    className=" text-feup font-bebas text-2xl w-full text-center md:hidden flex flex-col items-center justify-center relative"
                     href="/projects"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsHamburgerProjectsToggled((prev) => !prev);
+                    }}
                   >
                     {t("nav-projects")}
+                    <ChevronDown
+                      className={
+                        "h-6! w-6! absolute translate-x-12 top-3 transition-transform duration-300 " +
+                        (isHamburgerProjectsToggled ? "rotate-180" : "")
+                      }
+                    />
+                    <AnimatePresence>
+                      {isHamburgerProjectsToggled && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -50, scale: 1 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -50, scale: 1 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="w-full px-4 flex flex-col"
+                        >
+                          <NavigationMenuLink
+                            onClick={(e) => {
+                              e.stopPropagation();
+                            }}
+                            className=" text-foreground font-bebas text-xl w-full text-center"
+                            href="/projects/invictus"
+                          >
+                            {t("invictus")}
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            onClick={(e) => {
+                              e.stopPropagation();
+                            }}
+                            className=" text-foreground font-bebas text-xl w-full text-center"
+                            href="/projects/icarus"
+                          >
+                            {t("icarus")}
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            onClick={(e) => {
+                              e.stopPropagation();
+                            }}
+                            className=" text-foreground font-bebas text-xl w-full text-center"
+                            href="/projects/plutus"
+                          >
+                            {t("plutus")}
+                          </NavigationMenuLink>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </NavigationMenuLink>
+
                   <NavigationMenuLink
                     className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
                     href="/sponsors"
