@@ -18,8 +18,11 @@ import { sendApplication } from "@/app/actions/sendApplication";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { ChangeEvent, useState } from "react";
+import { Loader2Icon } from "lucide-react";
 
 export function ApplyForm() {
+  const [isLoading, setLoading] = useState(false);
+
   const [cv, updateCV] = useState({
     cv: "",
     cv_name: "",
@@ -110,6 +113,7 @@ export function ApplyForm() {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
+    setLoading(true);
     const success = await sendApplication({ ...data, ...cv, ...motivation });
     if (success) {
       toast.success(t("contact-success-title"), {
@@ -120,6 +124,7 @@ export function ApplyForm() {
         description: t("apply-error-description"),
       });
     }
+    setLoading(false);
   }
 
   return (
@@ -279,9 +284,16 @@ export function ApplyForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="bg-feup hover:cursor-pointer">
-          {t("contact-send")}
-        </Button>
+        {isLoading ? (
+          <Button className="bg-feup hover:cursor-pointer" disabled>
+            <Loader2Icon className="animate-spin" />
+            {t("send-loading")}
+          </Button>
+        ) : (
+          <Button type="submit" className="bg-feup hover:cursor-pointer">
+            {t("contact-send")}
+          </Button>
+        )}
       </form>
     </Form>
   );

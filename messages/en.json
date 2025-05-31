@@ -64,6 +64,8 @@
     "contact-course-error": "Course can not be empty",
     "contact-year-error": "Must be a valid year",
     "apply-success-description": "We'll swiftly respond to your application.",
-    "apply-error-description": "An error occurred while sending the application. Try again later please!"
+    "apply-error-description": "An error occurred while sending the application. Try again later please!",
+    "send-loading": "Sending...",
+    "project": "PROJECT"
   }
 }

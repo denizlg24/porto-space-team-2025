@@ -64,6 +64,8 @@
     "contact-course-error": "Curso não pode estar vazio",
     "contact-year-error": "Tem de ser um ano válido",
     "apply-success-description": "Vamos brevemente responder à tua aplicação!",
-    "apply-error-description": "Houve um erro ao enviar a tua aplicação!. Por favor tenta de novo mais tarde!"
+    "apply-error-description": "Houve um erro ao enviar a tua aplicação!. Por favor tenta de novo mais tarde!",
+    "send-loading": "A enviar...",
+    "project": "PROJETO"
   }
 }

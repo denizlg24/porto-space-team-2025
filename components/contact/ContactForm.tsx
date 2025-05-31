@@ -18,10 +18,12 @@ import { Textarea } from "../ui/textarea";
 import { sendContact } from "@/app/actions/sendContact";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { Loader2Icon } from "lucide-react";
 
 export function ContactForm() {
   const t = useTranslations("common");
-
+  const [isLoading, setLoading] = useState(false);
   const FormSchema = z.object({
     name: z.string().min(2, {
       message: t("contact-name-error"),
@@ -47,6 +49,7 @@ export function ContactForm() {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
+    setLoading(true);
     const success = await sendContact(data);
     if (success) {
       toast.success(t("contact-success-title"), {
@@ -57,6 +60,7 @@ export function ContactForm() {
         description: t("contact-error-description"),
       });
     }
+    setLoading(false);
   }
 
   return (
@@ -139,9 +143,16 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="bg-feup hover:cursor-pointer">
-          {t("contact-send")}
-        </Button>
+        {isLoading ? (
+          <Button className="bg-feup hover:cursor-pointer" disabled>
+            <Loader2Icon className="animate-spin" />
+            {t("send-loading")}
+          </Button>
+        ) : (
+          <Button type="submit" className="bg-feup hover:cursor-pointer">
+            {t("contact-send")}
+          </Button>
+        )}
       </form>
     </Form>
   );
