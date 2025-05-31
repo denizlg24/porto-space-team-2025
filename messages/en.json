@@ -66,6 +66,7 @@
     "apply-success-description": "We'll swiftly respond to your application.",
     "apply-error-description": "An error occurred while sending the application. Try again later please!",
     "send-loading": "Sending...",
-    "project": "PROJECT"
+    "project": "PROJECT",
+    "avionics": "Avionics"
   }
 }

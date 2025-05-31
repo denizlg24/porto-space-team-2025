@@ -25,41 +25,41 @@ export default function Footer() {
           <p className="sm:text-base text-xs">geral@portospaceteam.pt</p>
         </div>
       </div>
-      <div className="flex flex-row-reverse gap-2 justify-end sm:pt-0 pt-4 items-end">
+      <div className="flex flex-row-reverse gap-2 justify-end items-end">
         <a
           href="https://www.google.com/maps/place/Porto+Space+Team/@41.1781163,-8.5945483,15z/data=!4m6!3m5!1s0xd24657d6bcac819:0x58ab6feb15e61d9b!8m2!3d41.1781163!4d-8.5945483!16s%2Fg%2F11tfjwlz4z?entry=ttu"
           target="_blank"
-          className="flex items-center justify-center p-2 border border-white text-white rounded-full hover:cursor-pointer"
+          className="flex items-center justify-center sm:p-2 p-1 border border-white text-white rounded-full hover:cursor-pointer"
         >
-          <FaMapLocationDot className="w-6 h-6" />
+          <FaMapLocationDot className="sm:w-6 sm:h-6 w-4 h-4" />
         </a>
         <a
           href="mailto:geral@portospaceteam.pt"
           target="_blank"
-          className="flex items-center justify-center p-2 border border-white text-white rounded-full hover:cursor-pointer"
+          className="flex items-center justify-center sm:p-2 p-1 border border-white text-white rounded-full hover:cursor-pointer"
         >
-          <CiMail className="w-6 h-6" />
+          <CiMail className="sm:w-6 sm:h-6 w-4 h-4" />
         </a>
         <a
           href="https://www.linkedin.com/company/porto-space-team"
           target="_blank"
-          className="flex items-center justify-center p-2 border border-white text-white rounded-full hover:cursor-pointer"
+          className="flex items-center justify-center sm:p-2 p-1 border border-white text-white rounded-full hover:cursor-pointer"
         >
-          <SlSocialLinkedin className="w-6 h-6" />
+          <SlSocialLinkedin className="sm:w-6 sm:h-6 w-4 h-4" />
         </a>
         <a
           href="https://www.linkedin.com/company/porto-space-team"
           target="_blank"
-          className="flex items-center justify-center p-2 border border-white text-white rounded-full hover:cursor-pointer"
+          className="flex items-center justify-center sm:p-2 p-1 border border-white text-white rounded-full hover:cursor-pointer"
         >
-          <FaFacebookF className="w-6 h-6" />
+          <FaFacebookF className="sm:w-6 sm:h-6 w-4 h-4" />
         </a>
         <a
           href="https://www.instagram.com/portospaceteam/"
           target="_blank"
-          className="flex items-center justify-center p-2 border border-white text-white rounded-full hover:cursor-pointer"
+          className="flex items-center justify-center sm:p-2 p-1 border border-white text-white rounded-full hover:cursor-pointer"
         >
-          <FaInstagram className="w-6 h-6" />
+          <FaInstagram className="sm:w-6 sm:h-6 w-4 h-4" />
         </a>
       </div>
     </footer>
