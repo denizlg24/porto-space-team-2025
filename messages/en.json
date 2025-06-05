@@ -67,6 +67,8 @@
     "apply-error-description": "An error occurred while sending the application. Try again later please!",
     "send-loading": "Sending...",
     "project": "PROJECT",
-    "avionics": "Avionics"
+    "avionics": "Avionics",
+    "under":"UNDER",
+    "construction":"CONSTRUCTION"
   }
 }

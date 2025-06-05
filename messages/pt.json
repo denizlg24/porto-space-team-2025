@@ -67,6 +67,8 @@
     "apply-error-description": "Houve um erro ao enviar a tua aplicação!. Por favor tenta de novo mais tarde!",
     "send-loading": "A enviar...",
     "project": "PROJETO",
-    "avionics": "Aviónica"
+    "avionics": "Aviónica",
+    "under": "SOBRE",
+    "construction": "CONSTRUÇÃO"
   }
 }
