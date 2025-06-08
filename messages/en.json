@@ -68,7 +68,12 @@
     "send-loading": "Sending...",
     "project": "PROJECT",
     "avionics": "Avionics",
-    "under":"UNDER",
-    "construction":"CONSTRUCTION"
+    "under": "UNDER",
+    "construction": "CONSTRUCTION",
+    "icarus-title-1": "A UNIVERSE IN A",
+    "icarus-title-2": "CUBE",
+    "icarus-title-3": "DESIGNED BY US.",
+    "icarus-title-4": "SMALL BUILDS,",
+    "icarus-title-5": "BOLD VISIONS."
   }
 }

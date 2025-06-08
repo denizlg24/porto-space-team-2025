@@ -11,7 +11,7 @@ import { FaTools } from "react-icons/fa";
 export default function Page() {
   const t = useTranslations("common");
   return (
-    <main className="min-h-screen relative flex flex-col items-center gap-8 sm:px-12 px-6 py-12">
+    <main className="max-h-screen relative flex flex-col items-center gap-16 sm:px-12 px-6 py-12 overflow-clip overflow-y-auto hide-scrollbar w-full">
       <h1 className="sm:mt-32 mt-16 w-full max-w-xs pb-4 text-center text-white font-bebas font-semibold lg:text-7xl md:text-6xl sm:text-5xl text-4xl border-b-2 border-white">
         {t("invictus")}
       </h1>
@@ -102,22 +102,13 @@ export default function Page() {
       <div className="flex flex-col items-stretch w-full max-w-3xl sm:gap-4 gap-0">
         <div className="flex flex-col gap-4 w-full col-span-3 ">
           <div className="flex flex-row items-center justify-center gap-6 w-full">
-            <h2 className="md:text-6xl sm:text-5xl text-3xl font-bebas text-white sm:text-left text-center w-full">
+            <h2 className="md:text-6xl sm:text-5xl text-3xl font-bebas text-white text-center w-full">
               {t("project")}{" "}
               <span className="md:text-6xl sm:text-5xl text-3xl">
                 {t("invictus")}
               </span>{" "}
               <span>2025</span>
             </h2>
-            <Image
-              src={logoSrc}
-              width={1080}
-              height={1080}
-              alt="Invictus logo"
-              className={
-                "w-full h-auto aspect-square md:max-w-48 sm:max-w-32 max-w-24 -rotate-48"
-              }
-            />
           </div>
           <div className="w-full grid grid-cols-2 items-center justify-center gap-2">
             <Image
@@ -144,7 +135,7 @@ export default function Page() {
         fill
         priority
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
-        className="w-full h-auto object-cover -z-10"
+        className="w-full h-auto max-h-screen object-cover -z-10 !fixed"
       />
     </main>
   );
