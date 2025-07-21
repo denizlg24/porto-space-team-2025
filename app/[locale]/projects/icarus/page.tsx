@@ -7,11 +7,7 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 export default function Page() {
   const t = useTranslations("common");
   return (
-<<<<<<< HEAD
     <main className="relative flex flex-col items-center gap-16 sm:px-12 px-6 py-12 w-full outline-0! ring-0!">
-=======
-    <main className="h-screen relative flex flex-col items-center gap-16 sm:px-12 px-6 py-12 overflow-clip overflow-y-auto hide-scrollbar w-full">
->>>>>>> 1a361cc12becf0a839d57c835ed80113d50c4912
       <h1 className="sm:mt-32 mt-16 w-full max-w-xs pb-4 text-center text-white font-bebas font-semibold lg:text-7xl md:text-6xl sm:text-5xl text-4xl border-b-2 border-feup">
         {t("icarus")}
       </h1>
