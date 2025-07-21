@@ -67,6 +67,24 @@
     "apply-error-description": "Houve um erro ao enviar a tua aplicação!. Por favor tenta de novo mais tarde!",
     "send-loading": "A enviar...",
     "project": "PROJETO",
-    "avionics": "Aviónica"
+    "avionics": "Aviónica",
+    "under": "SOBRE",
+    "construction": "CONSTRUÇÃO",
+    "icarus-title-1": "UM UNIVERSO NUM",
+    "icarus-title-2": "CUBO",
+    "icarus-title-3": "DESENHADO POR NÓS.",
+    "icarus-title-4": "PEQUENAS CONSTRUÇÕES,",
+    "icarus-title-5": "GRANDES VISÕES.",
+    "low-budget": "BAIXO ORÇAMENTO",
+    "efficient": "EFICIENTE",
+    "length": "COMPRIMENTO",
+    "mass": "MASSA TOTAL",
+    "max-velocity": "RAPIDEZ MÁX.",
+    "thrust": "PROPULSÃO",
+    "hot-fire-test": "TESTE DE FOGO QUENTE",
+    "fire-test-subtitle": "O primeiro em Portugal...",
+    "explore-rocket": "Explora o nosso foguetão",
+    "click-each-part": "Clique no foguetão para mais informação",
+    "under-development": "Em desenvolvimento notícias em breve..."
   }
 }

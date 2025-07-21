@@ -67,6 +67,24 @@
     "apply-error-description": "An error occurred while sending the application. Try again later please!",
     "send-loading": "Sending...",
     "project": "PROJECT",
-    "avionics": "Avionics"
+    "avionics": "Avionics",
+    "under": "UNDER",
+    "construction": "CONSTRUCTION",
+    "icarus-title-1": "A UNIVERSE IN A",
+    "icarus-title-2": "CUBE",
+    "icarus-title-3": "DESIGNED BY US.",
+    "icarus-title-4": "SMALL BUILDS,",
+    "icarus-title-5": "BOLD VISIONS.",
+    "low-budget": "LOW BUDGET",
+    "efficient": "EFFICIENT",
+    "length": "LENGTH",
+    "mass": "TOTAL MASS",
+    "max-velocity": "TOP SPEED",
+    "thrust": "THRUST",
+    "hot-fire-test": "HOT FIRE TEST",
+    "fire-test-subtitle": "The first ever in Portugal...",
+    "explore-rocket": "Explore our Rocket",
+    "click-each-part": "Click the rocket for more info",
+    "under-development": "Under development news soon..."
   }
 }
