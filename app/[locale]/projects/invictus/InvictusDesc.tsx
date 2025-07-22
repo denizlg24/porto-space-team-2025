@@ -150,11 +150,11 @@ export const InvictusDesc = () => {
     };
   }, [api, current, count, inView]);
   return (
-    <main className="relative flex flex-col items-center sm:gap-16 gap-8 px-0 py-12 w-full outline-0! ring-0!">
-      <h1 className="sm:mt-24 mt-16 w-full max-w-xs pb-4 text-center text-white font-bebas font-semibold lg:text-7xl md:text-6xl sm:text-5xl text-4xl border-b-2">
+    <main className="relative flex flex-col items-center sm:gap-16 gap-8 py-12 w-full outline-0! ring-0!">
+      <h1 className="sm:mt-24 mt-16 w-full max-w-xs pb-4 text-center text-white font-bebas font-semibold lg:text-7xl md:text-6xl sm:text-5xl text-4xl border-b-2 sm:mx-8 mx-4">
         {t("invictus")} 1.0
       </h1>
-      <div className="flex sm:flex-row flex-col-reverse justify-between sm:gap-6 gap-4 items-center w-full max-w-xl">
+      <div className="flex sm:flex-row flex-col-reverse justify-between sm:gap-6 gap-4 items-center w-full max-w-xl sm:mx-8 mx-4">
         <div className="flex sm:flex-col flex-row justify-center gap-2 sm:text-left text-center w-full max-w-lg text-white font-bebas font-semibold">
           <p className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">
             {t("project")}
@@ -174,7 +174,7 @@ export const InvictusDesc = () => {
           }
         />
       </div>
-      <div className="w-full p-2 flex items-center justify-center bg-gray-600/75">
+      <div className="w-full sm:-mx-8 -mx-4 p-2 flex items-center justify-center bg-gray-300/75">
         <div className="w-full lg:max-w-lg max-w-md flex flex-row justify-between gap-6 sm:px-0 px-6">
           <div className="flex flex-col gap-2 items-center col-span-1 w-full max-w-[300px]">
             <BadgeEuro className="w-full h-auto aspect-square md:max-w-[160px] max-w-[100px] text-[#041322]" />
@@ -190,7 +190,7 @@ export const InvictusDesc = () => {
           </div>
         </div>
       </div>
-      <h2 className="w-full max-w-3xl text-left text-white font-arimo lg:text-2xl md:text-xl sm:text-lg text-md px-4">
+      <h2 className="w-full max-w-3xl text-left text-white font-arimo lg:text-2xl md:text-xl sm:text-lg text-md sm:px-8 px-4">
         The first ever student made hybrid propulsion rocket, in Portugal, was
         designed and built by us in 2024 , the result of two years of hard work.
       </h2>
@@ -199,10 +199,10 @@ export const InvictusDesc = () => {
         width={686}
         height={206}
         alt="Invictus rocket"
-        className={"w-full max-w-3xl object-contain -mt-12"}
+        className={"w-full max-w-3xl object-contain -mt-12 sm:mx-8 mx-4"}
       />
-      <div className="w-full p-2 flex items-center justify-center bg-gray-600/75">
-        <div className="w-full lg:max-w-3xl sm:max-w-lg flex flex-row justify-between sm:px-0 px-2">
+      <div className="w-full sm:-mx-8 -mx-4 p-2 flex items-center justify-center bg-gray-300/75">
+        <div className="w-full lg:max-w-3xl sm:max-w-lg flex flex-row justify-between">
           <div className="flex flex-col gap-2 items-center col-span-1 w-full max-w-[300px]">
             <RulerDimensionLine className="w-full h-auto aspect-square md:max-w-[120px] max-w-[80px] text-[#041322]" />
             <p className="lg:text-4xl md:text-3xl sm:text-2xl text-lg text-[#041322] font-bebas text-center">
@@ -241,7 +241,7 @@ export const InvictusDesc = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 items-center">
+      <div className="flex flex-col gap-4 items-center sm:mx-8 mx-4">
         <div className="flex flex-col gap-0 items-center text-center text-white font-bebas">
           <h1 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold">
             {t("hot-fire-test")}
@@ -250,7 +250,7 @@ export const InvictusDesc = () => {
             {t("fire-test-subtitle")}
           </h2>
         </div>
-        <div className="w-full max-w-3xl flex lg:flex-row flex-col items-stretch gap-2 relative px-4">
+        <div className="w-full max-w-3xl flex lg:flex-row flex-col items-stretch gap-2 relative ">
           <Image
             src={fire_test}
             className="h-[400px] w-auto"
@@ -258,7 +258,7 @@ export const InvictusDesc = () => {
           />
           <video
             src="https://7eyx2g907l.ufs.sh/f/sLYGJAi3EKZOsBF3pUi3EKZOkC9TLRwmFy5QpiGUh1sWqSJg"
-            className="lg:relative absolute w-auto lg:h-[400px] h-[380px] lg:left-auto lg:top-auto lg:translate-0 lg:border-0 lg:p-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-[#041322] p-2"
+            className="lg:relative absolute w-[225px] lg:h-[400px] h-[380px] lg:left-auto lg:top-auto lg:translate-0 lg:border-0 lg:p-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 border-4 border-[#041322] p-2"
             controls
             muted
           ></video>
@@ -266,7 +266,7 @@ export const InvictusDesc = () => {
       </div>
       <div
         ref={containerRef}
-        className="flex flex-col gap-2 items-center text-white px-4"
+        className="flex flex-col gap-2 items-center text-white sm:mx-8 mx-4"
       >
         <h1 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold font-bebas">
           {t("explore-rocket")}
@@ -275,7 +275,7 @@ export const InvictusDesc = () => {
           ({t("click-each-part")})
         </p>
 
-        <div className="w-full px-4">
+        <div className="w-full">
           <div className="flex flex-row items-center gap-0 max-h-[99px] w-full">
             <div
               onClick={() => {
@@ -361,7 +361,7 @@ export const InvictusDesc = () => {
       {/*CARD HERE*/}
       <Carousel
         opts={{ align: "center" }}
-        className="w-full max-w-3xl px-2"
+        className="w-full max-w-3xl px-2 sm:mx-8 mx-4"
         setApi={setApi}
       >
         <CarouselContent>
@@ -381,8 +381,8 @@ export const InvictusDesc = () => {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="flex flex-col items-stretch w-full max-w-3xl gap-4 px-4">
-        <div className="w-full max-w-sm pb-4 border-b-2 border-white mx-auto">
+      <div className="flex flex-col items-stretch w-full max-w-3xl gap-4  sm:mx-8 mx-4">
+        <div className="w-full max-w-xs pb-4 border-b-2 border-white mx-auto">
           <h1 className="md:text-6xl sm:text-5xl text-3xl font-bebas text-white text-center w-full">
             {t("invictus")} 2.0
           </h1>
