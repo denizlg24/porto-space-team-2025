@@ -96,6 +96,22 @@
     "avionics": "Avionics",
     "avionics-desc": "Responsible for all onboard electronics, sensors, and communication systems.",
     "recovery": "Recovery",
-    "recovery-desc": "Ensures the rocket returns safely using parachutes and landing systems."
+    "recovery-desc": "Ensures the rocket returns safely using parachutes and landing systems.",
+    "icarus-full-p1": "Project ICARUS brings together more than 30 students to design and develop a 1U CubeSat equipped with a Langmuir probe, capable of measuring critical parameters of ionospheric plasma. These measurements contribute to a deeper understanding of space weather phenomena and their effects on satellite communication, navigation systems, and Earth's upper atmosphere.",
+    "icarus-full-p2": "The primary goal of ICARUS is to provide students with the opportunity to go beyond the classroom and gain hands-on experience through the design and development of a fully functional satellite. Our strong commitment to education and innovation is reflected in our emphasis on in-house development and testing of most of the satellite's components. This hands-on approach ensures not only technical excellence but also valuable learning experiences for everyone involved.",
+    "icarus-full-p3": "With this project we are participating in the CubeSat Portugal competition, a national initiative promoted by the Portuguese Space Agency that challenges university students to design and launch their own CubeSats with real scientific and technological value.",
+    "icarus-model": "Model of Icarus",
+    "telemetry": "Telemetry",
+    "telemetry-desc": "The telemetry subsystem will enable communication between the CubeSat and the ground station, using the UHF band (435–438 MHz) with dipole antennas (2.15 dB gain), an OpenLST radio module and both FK and CW beacons. Our ground station will be fully autonomous, will include a SDR transceiver and two 8-element Cross-Yagi antennas with an expected gain of 13 dBi.",
+    "attitude": "Attitude Determination and Control System",
+    "attitude-desc": "ADCS features gyroscopes, magnetometers paired with solar cells acting as sun sensors for attitude determination and 3 magnetorquers embedded in different axis solar panels PCBs for attitude control.",
+    "payload": "Payload",
+    "payload-desc": "The Payload subsystem develops and integrates a four-probe Langmuir system to measure electron density in the ionosphere. It operates in sweeping and fixed-bias modes, enabling both plasma diagnostics and high-resolution monitoring. Its primary objective is to study small-scale plasma structures that can affect satellite communication and navigation.",
+    "structures-thermal": "Structures and Thermal",
+    "structures-thermal-desc": "The Structures and Thermal Control system incorporates deployable antenna and payload mechanisms featuring a burn wire release, development of the antenna structure in PEEK, management of the secondary PCB stack, integration into the aluminum chassis, and implementation of precision spacers for alignment and structural support.",
+    "computer": "On-board Computer",
+    "computer-desc": "The Data Handing subsystem is comprised of a Dual SRAD OBC configuration based on the cortex m33 CPU with radiation resistant memory running Karvel, a ECSS compliant flight platform.",
+    "electrical": "Electrical Power System",
+    "electrical-desc": "The EPS comprises 5 solar panels, each equipped with 2 high-efficiency triple-junction photovoltaic cells connected in series, responsible for converting solar radiation into electrical energy. This energy is stored in lithium-based rechargeable batteries and managed by a dedicated Power Management and Distribution module. The system provides regulated power buses at 3.3 V, 5 V, and 12 V, as well as an unregulated battery voltage rail, ensuring continuous and stable power delivery to all subsystems. Designed for efficiency and reliability, the EPS includes built-in protections against short circuits and overcharge, and supports uninterrupted operation even during orbital eclipses."
   }
 }

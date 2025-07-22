@@ -96,6 +96,22 @@
     "avionics": "Aviónica",
     "avionics-desc": "Responsável por toda a eletrónica, sensores e sistemas de comunicação a bordo.",
     "recovery": "Recuperação",
-    "recovery-desc": "Garante o retorno seguro do foguete através de paraquedas e sistemas de aterragem."
+    "recovery-desc": "Garante o retorno seguro do foguete através de paraquedas e sistemas de aterragem.",
+    "icarus-full-p1": "O Projeto ICARUS reúne mais de 30 estudantes para conceber e desenvolver um CubeSat 1U equipado com uma sonda de Langmuir, capaz de medir parâmetros críticos do plasma ionosférico. Estas medições contribuem para uma compreensão mais profunda dos fenómenos do clima espacial e dos seus efeitos nas comunicações por satélite, nos sistemas de navegação e na alta atmosfera terrestre.",
+    "icarus-full-p2": "O principal objetivo do ICARUS é proporcionar aos estudantes a oportunidade de irem além da sala de aula e adquirirem experiência prática através do design e desenvolvimento de um satélite totalmente funcional. O nosso forte compromisso com a educação e a inovação reflete-se na ênfase que damos ao desenvolvimento e testes internos da maioria dos componentes do satélite. Esta abordagem prática garante não só excelência técnica, mas também experiências de aprendizagem valiosas para todos os envolvidos.",
+    "icarus-full-p3": "Com este projeto estamos a participar na competição CubeSat Portugal, uma iniciativa nacional promovida pela Agência Espacial Portuguesa que desafia estudantes universitários a conceber e lançar os seus próprios CubeSats com verdadeiro valor científico e tecnológico.",
+    "icarus-model": "Modelo do Icarus",
+    "telemetry": "Telemetria",
+    "telemetry-desc": "O subsistema de telemetria permitirá a comunicação entre o CubeSat e a estação terrestre, utilizando a banda UHF (435–438 MHz) com antenas dipolo (ganho de 2,15 dB), um módulo de rádio OpenLST e balizas FK e CW. A nossa estação terrestre será totalmente autónoma, incluirá um transceptor SDR e duas antenas Cross-Yagi de 8 elementos com ganho previsto de 13 dBi.",
+    "attitude": "Sistema de Determinação e Controlo de Atitude",
+    "attitude-desc": "O ADCS inclui giroscópios, magnetómetros combinados com células solares que atuam como sensores solares para a determinação da atitude, e 3 magnetorquers embutidos em PCBs de painéis solares em diferentes eixos para o controlo da atitude.",
+    "payload": "Carga Útil",
+    "payload-desc": "O subsistema de carga útil desenvolve e integra um sistema de quatro sondas de Langmuir para medir a densidade eletrónica na ionosfera. Opera em modos de varrimento e de polarização fixa, permitindo diagnósticos do plasma e monitorização de alta resolução. O seu principal objetivo é estudar estruturas de plasma de pequena escala que podem afetar a comunicação e navegação por satélite.",
+    "structures-thermal": "Estruturas e Controlo Térmico",
+    "structures-thermal-desc": "O sistema de Estruturas e Controlo Térmico incorpora mecanismos de antena e carga útil desdobráveis com libertação por fio fusível, desenvolvimento da estrutura da antena em PEEK, gestão da pilha de PCBs secundária, integração no chassis de alumínio e implementação de espaçadores de precisão para alinhamento e suporte estrutural.",
+    "computer": "Computador de Bordo",
+    "computer-desc": "O subsistema de Gestão de Dados é composto por uma configuração Dual SRAD OBC baseada no CPU Cortex-M33 com memória resistente à radiação a correr o Karvel, uma plataforma de voo compatível com a norma ECSS.",
+    "electrical": "Sistema de Alimentação Elétrica",
+    "electrical-desc": "O EPS é composto por 5 painéis solares, cada um equipado com 2 células fotovoltaicas de tripla junção de alta eficiência conectadas em série, responsáveis por converter a radiação solar em energia elétrica. Esta energia é armazenada em baterias recarregáveis de lítio e gerida por um módulo dedicado de Gestão e Distribuição de Energia. O sistema fornece linhas de alimentação reguladas de 3,3 V, 5 V e 12 V, bem como uma linha de tensão não regulada da bateria, garantindo fornecimento contínuo e estável de energia para todos os subsistemas. Concebido para eficiência e fiabilidade, o EPS inclui proteções integradas contra curtos-circuitos e sobrecarga, e suporta funcionamento ininterrupto mesmo durante eclipses orbitais."
   }
 }
