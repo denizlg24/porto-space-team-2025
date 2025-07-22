@@ -35,34 +35,33 @@ export const InvictusDesc = () => {
   const sections = [
     {
       id: "ground",
-      title: "Ground",
-      description:
-        "Ground systems handle the launch pad and support infrastructure.",
+      title: t("ground"),
+      description: t("ground-desc"),
     },
     {
       id: "aerodynamics",
-      title: "Aerodynamics",
-      description: "Ensures the rocket flies smoothly through the atmosphere.",
+      title: t("aerodynamics"),
+      description: t("aerodynamics-desc"),
     },
     {
       id: "propulsion",
-      title: "Propulsion",
-      description: "Provides the thrust to escape Earth's gravity.",
+      title: t("propulsion"),
+      description: t("propulsion-desc"),
     },
     {
       id: "structures",
-      title: "Structures",
-      description: "Framework that supports all other systems.",
+      title: t("structures"),
+      description: t("structures-desc"),
     },
     {
       id: "avionics",
-      title: "Avionics",
-      description: "Navigation, telemetry, and onboard control.",
+      title: t("avionics"),
+      description: t("avionics-desc"),
     },
     {
       id: "recovery",
-      title: "Recovery",
-      description: "Systems that bring the rocket safely back to Earth.",
+      title: t("recovery"),
+      description: t("recovery-desc"),
     },
   ];
   const [api, setApi] = useState<CarouselApi>();
@@ -87,26 +86,56 @@ export const InvictusDesc = () => {
 
   const [count, setCount] = useState(0);
   const scrollLockRef = useRef(false); // debounce lock
-  const containerRef = useRef<HTMLDivElement>(null);
+  const topRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
 
+  const lastScrollY = useRef(0);
+  const scrollDirection = useRef<"up" | "down">("down");
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      {
-        threshold: 0.6, // Adjust how much needs to be visible
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      scrollDirection.current =
+        currentScrollY > lastScrollY.current ? "down" : "up";
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleIntersection = (
+      entry: IntersectionObserverEntry,
+      direction: "up" | "down"
+    ) => {
+      const isVisible = entry.isIntersecting;
+      if (scrollDirection.current === direction && isVisible) {
+        setInView(true);
+      } else if (scrollDirection.current !== direction) {
+        setInView(false);
       }
+    };
+
+    const observerTop = new IntersectionObserver(
+      ([entry]) => handleIntersection(entry, "up"),
+      { threshold: 0 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    const observerBottom = new IntersectionObserver(
+      ([entry]) => handleIntersection(entry, "down"),
+      { threshold: 0 }
+    );
+
+    if (topRef.current) observerTop.observe(topRef.current);
+    if (bottomRef.current) observerBottom.observe(bottomRef.current);
 
     return () => {
-      if (containerRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(containerRef.current);
-      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      if (topRef.current) observerTop.unobserve(topRef.current);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      if (bottomRef.current) observerBottom.unobserve(bottomRef.current);
     };
   }, []);
 
@@ -133,7 +162,7 @@ export const InvictusDesc = () => {
 
       if (scrollLockRef.current) return;
       scrollLockRef.current = true;
-      setTimeout(() => (scrollLockRef.current = false), 700);
+      setTimeout(() => (scrollLockRef.current = false), 500);
 
       if (event.deltaY > 0) {
         api.scrollNext();
@@ -264,11 +293,11 @@ export const InvictusDesc = () => {
           ></video>
         </div>
       </div>
-      <div
-        ref={containerRef}
-        className="flex flex-col gap-2 items-center text-white sm:mx-8 mx-4"
-      >
-        <h1 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold font-bebas">
+      <div className="flex flex-col gap-2 items-center text-white sm:mx-8 mx-4">
+        <h1
+          ref={topRef}
+          className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold font-bebas"
+        >
           {t("explore-rocket")}
         </h1>
         <p className="lg:text-2xl md:text-xl text-lg font-bebas">
@@ -360,6 +389,7 @@ export const InvictusDesc = () => {
       </div>
       {/*CARD HERE*/}
       <Carousel
+        ref={bottomRef}
         opts={{ align: "center" }}
         className="w-full max-w-3xl px-2 sm:mx-8 mx-4"
         setApi={setApi}
@@ -372,7 +402,7 @@ export const InvictusDesc = () => {
                   <h1 className="text-white text-center font-bebas text-3xl sm:text-4xl md:text-5xl border-b-2 border-white pb-2">
                     {section.title}
                   </h1>
-                  <p className="mt-2 text-white text-center">
+                  <p className="mt-2 text-white text-center font-arimo text-lg">
                     {section.description}
                   </p>
                 </CardHeader>

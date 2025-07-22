@@ -67,7 +67,6 @@
     "apply-error-description": "An error occurred while sending the application. Try again later please!",
     "send-loading": "Sending...",
     "project": "PROJECT",
-    "avionics": "Avionics",
     "under": "UNDER",
     "construction": "CONSTRUCTION",
     "icarus-title-1": "A UNIVERSE IN A",
@@ -85,6 +84,18 @@
     "fire-test-subtitle": "The first ever in Portugal...",
     "explore-rocket": "Explore our Rocket",
     "click-each-part": "Click the rocket for more info",
-    "under-development": "Under development news soon..."
+    "under-development": "Under development news soon...",
+    "ground": "Ground",
+    "ground-desc": "Handles launchpad operations, safety protocols, and all support systems before takeoff.",
+    "aerodynamics": "Aerodynamics",
+    "aerodynamics-desc": "Focuses on airflow, drag reduction, and stability during flight.",
+    "propulsion": "Propulsion",
+    "propulsion-desc": "Develops and tests the engines that power the rocket.",
+    "structures": "Structures",
+    "structures-desc": "Designs the rocket frame and ensures it withstands mechanical stress.",
+    "avionics": "Avionics",
+    "avionics-desc": "Responsible for all onboard electronics, sensors, and communication systems.",
+    "recovery": "Recovery",
+    "recovery-desc": "Ensures the rocket returns safely using parachutes and landing systems."
   }
 }
