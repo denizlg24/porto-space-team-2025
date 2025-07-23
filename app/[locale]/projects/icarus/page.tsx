@@ -5,19 +5,13 @@ import icarus_build from "@/public/project/icarus-build.webp";
 import icarusTeam from "@/public/project/icarus-team.jpg";
 import Image from "next/image";
 import { Card, CardHeader } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 import inegi from "@/public/sponsors/icarus/INEGI_00238_15-G02Q49_00-logo-inegi-slogan.png";
 import critical from "@/public/sponsors/icarus/Logo_CSW-995x1024.png";
 import esatan from "@/public/sponsors/icarus/ESATANlogo.png";
 import ncab from "@/public/sponsors/icarus/image (5).png";
 import weg from "@/public/sponsors/icarus/weg.webp";
+import { CardScroller } from "./CardScroller";
 
 export default function Page() {
   const t = useTranslations("common");
@@ -81,95 +75,93 @@ export default function Page() {
           {t("icarus-model")}
         </p>
       </div>
-      <Carousel
-        opts={{ align: "center" }}
-        className="w-full max-w-3xl sm:px-12 px-6"
-      >
-        <CarouselContent>
-          <CarouselItem className="my-auto">
-            <Card className="p-4 w-full max-w-3xl bg-feup/50 border-none">
-              <CardHeader className="flex flex-col items-center">
-                <h1 className="text-white text-center font-bebas text-3xl sm:text-4xl md:text-5xl border-b-2 border-white pb-2">
-                  {t("telemetry")}
-                </h1>
-                <p className="mt-2 text-white font-arimo text-lg text-left">
-                  {t("telemetry-desc")}
-                </p>
-              </CardHeader>
-            </Card>
-          </CarouselItem>
-          <CarouselItem className="my-auto">
-            <Card className="p-4 w-full max-w-3xl bg-feup/50 border-none">
-              <CardHeader className="flex flex-col items-center">
-                <h1 className="text-white text-center font-bebas text-3xl sm:text-4xl md:text-5xl border-b-2 border-white pb-2">
-                  {t("attitude")}
-                </h1>
-                <p className="mt-2 text-white font-arimo text-lg text-left">
-                  {t("attitude-desc")}
-                </p>
-              </CardHeader>
-            </Card>
-          </CarouselItem>
-          <CarouselItem className="my-auto">
-            <Card className="p-4 w-full max-w-3xl bg-feup/50 border-none">
-              <CardHeader className="flex flex-col items-center">
-                <h1 className="text-white text-center font-bebas text-3xl sm:text-4xl md:text-5xl border-b-2 border-white pb-2">
-                  {t("payload")}
-                </h1>
-                <p className="mt-2 text-white font-arimo text-lg text-left">
-                  {t("payload-desc")}
-                </p>
-              </CardHeader>
-            </Card>
-          </CarouselItem>
-          <CarouselItem className="my-auto">
-            <Card className="p-4 w-full max-w-3xl bg-feup/50 border-none">
-              <CardHeader className="flex flex-col items-center">
-                <h1 className="text-white text-center font-bebas text-3xl sm:text-4xl md:text-5xl border-b-2 border-white pb-2">
-                  {t("structures-thermal")}
-                </h1>
-                <p className="mt-2 text-white font-arimo text-lg text-left">
-                  {t("structures-thermal-desc")}
-                </p>
-              </CardHeader>
-            </Card>
-          </CarouselItem>
-          <CarouselItem className="my-auto">
-            <Card className="p-4 w-full max-w-3xl bg-feup/50 border-none">
-              <CardHeader className="flex flex-col items-center">
-                <h1 className="text-white text-center font-bebas text-3xl sm:text-4xl md:text-5xl border-b-2 border-white pb-2">
-                  {t("computer")}
-                </h1>
-                <p className="mt-2 text-white font-arimo text-lg text-left">
-                  {t("computer-desc")}
-                </p>
-              </CardHeader>
-            </Card>
-          </CarouselItem>
-          <CarouselItem className="my-auto">
-            <Card className="p-4 w-full max-w-3xl bg-feup/50 border-none">
-              <CardHeader className="flex flex-col items-center">
-                <h1 className="text-white text-center font-bebas text-3xl sm:text-4xl md:text-5xl border-b-2 border-white pb-2">
-                  {t("electrical")}
-                </h1>
-                <p className="mt-2 text-white font-arimo text-lg text-left">
-                  {t("electrical-desc")}
-                </p>
-              </CardHeader>
-            </Card>
-          </CarouselItem>
-        </CarouselContent>
-        <CarouselPrevious
-          size={"lg"}
-          className="text-white md:-left-4 -left-1 p-0!  hover:scale-105 transition-all hover:cursor-pointer"
-          variant={"link"}
-        />
-        <CarouselNext
-          size={"lg"}
-          className="text-white md:-right-4 -right-1  p-0! hover:scale-105 transition-all hover:cursor-pointer"
-          variant={"link"}
-        />
-      </Carousel>
+      <CardScroller>
+        {[
+          <Card
+            key={t("telemetry")}
+            className="p-4 w-full max-w-3xl bg-feup/50 border-none card-scroll-item h-fit!"
+          >
+            <CardHeader className="flex flex-col items-center px-0">
+              <h1 className="text-white text-center font-bebas text-2xl sm:text-3xl md:text-4xl border-b-2 border-white sm:pb-2 pb-0 px-4">
+                {t("telemetry")}
+              </h1>
+              <p className="mt-2 text-white font-arimo text-left lg:text-lg md:text-base sm:text-sm text-xs">
+                {t("telemetry-desc")}
+              </p>
+            </CardHeader>
+          </Card>,
+
+          <Card
+            key={t("attitude")}
+            className="p-4 w-full max-w-3xl bg-feup/50 border-none card-scroll-item h-fit!"
+          >
+            <CardHeader className="flex flex-col items-center px-0">
+              <h1 className="text-white text-center font-bebas text-2xl sm:text-3xl md:text-4xl border-b-2 border-white sm:pb-2 pb-0 px-4">
+                {t("attitude")}
+              </h1>
+              <p className="mt-2 text-white font-arimo text-left lg:text-lg md:text-base sm:text-sm text-xs">
+                {t("attitude-desc")}
+              </p>
+            </CardHeader>
+          </Card>,
+
+          <Card
+            key={t("payload")}
+            className="p-4 w-full max-w-3xl bg-feup/50 border-none card-scroll-item h-fit!"
+          >
+            <CardHeader className="flex flex-col items-center px-0">
+              <h1 className="text-white text-center font-bebas text-2xl sm:text-3xl md:text-4xl border-b-2 border-white sm:pb-2 pb-0 px-4">
+                {t("payload")}
+              </h1>
+              <p className="mt-2 text-white font-arimo text-left lg:text-lg md:text-base sm:text-sm text-xs">
+                {t("payload-desc")}
+              </p>
+            </CardHeader>
+          </Card>,
+
+          <Card
+            key={t("structures-thermal")}
+            className="p-4 w-full max-w-3xl bg-feup/50 border-none card-scroll-item h-fit!"
+          >
+            <CardHeader className="flex flex-col items-center px-0">
+              <h1 className="text-white text-center font-bebas text-2xl sm:text-3xl md:text-4xl border-b-2 border-white sm:pb-2 pb-0 px-4">
+                {t("structures-thermal")}
+              </h1>
+              <p className="mt-2 text-white font-arimo text-left lg:text-lg md:text-base sm:text-sm text-xs">
+                {t("structures-thermal-desc")}
+              </p>
+            </CardHeader>
+          </Card>,
+
+          <Card
+            key={t("computer")}
+            className="p-4 w-full max-w-3xl bg-feup/50 border-none card-scroll-item h-fit!"
+          >
+            <CardHeader className="flex flex-col items-center px-0">
+              <h1 className="text-white text-center font-bebas text-2xl sm:text-3xl md:text-4xl border-b-2 border-white sm:pb-2 pb-0 px-4">
+                {t("computer")}
+              </h1>
+              <p className="mt-2 text-white font-arimo text-left lg:text-lg md:text-base sm:text-sm text-xs">
+                {t("computer-desc")}
+              </p>
+            </CardHeader>
+          </Card>,
+
+          <Card
+            key={t("electrical")}
+            className="p-4 w-full max-w-3xl bg-feup/50 border-none card-scroll-item h-fit!"
+          >
+            <CardHeader className="flex flex-col items-center px-0">
+              <h1 className="text-white text-center font-bebas text-2xl sm:text-3xl md:text-4xl border-b-2 border-white sm:pb-2 pb-0 px-4">
+                {t("electrical")}
+              </h1>
+              <p className="mt-2 text-white font-arimo lg:text-lg md:text-base sm:text-sm text-xs text-left">
+                {t("electrical-desc")}
+              </p>
+            </CardHeader>
+          </Card>,
+        ]}
+      </CardScroller>
       <div className="w-full p-4 bg-white pb-12">
         <div className="flex flex-col w-full max-w-md text-center gap-1 mx-auto">
           <h1 className="font-bebas md:text-7xl text-5xl text-feup uppercase">

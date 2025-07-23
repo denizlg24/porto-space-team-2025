@@ -282,7 +282,7 @@ export const InvictusDesc = () => {
         <div className="w-full max-w-3xl flex lg:flex-row flex-col items-stretch gap-2 relative ">
           <Image
             src={fire_test}
-            className="h-[400px] w-auto"
+            className="h-[400px] w-auto object-cover"
             alt="hot-fire-test-team"
           />
           <video

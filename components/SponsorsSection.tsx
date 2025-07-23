@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-
+import pluris from "@/public/sponsors/diamond/Logo_Pluris_2.png";
 export default function Sponsors() {
   const t = useTranslations("common");
   return (
@@ -12,34 +12,11 @@ export default function Sponsors() {
         </h1>
         <div className="w-full bg-feup h-1"></div>
         <h2 className="font-bebas md:text-5xl text-3xl text-feup uppercase">
-          {t("gold-sponsors")}
+          {t("diamond-sponsors")}
         </h2>
       </div>
-      <div className="relative flex justify-center w-[80%] max-w-xs h-24">
-        <Image
-          src="/sponsors/gold/Inegi.svg"
-          alt="Inegi Icon"
-          fill
-          className="object-contain"
-        />
-      </div>
-      <div className="flex md:flex-row flex-col sm:gap-16 gap-0 items-center justify-center w-[80%]">
-        <div className="relative flex justify-center w-full lg:flex-1 max-w-xs h-32">
-          <Image
-            src="/sponsors/gold/Orion.svg"
-            alt="Orion Icon"
-            fill
-            className="object-contain"
-          />
-        </div>
-        <div className="relative flex justify-center w-full lg:flex-1 max-w-xs h-32">
-          <Image
-            src="/sponsors/gold/Moldecar.svg"
-            alt="Moldecar Icon"
-            fill
-            className="object-contain"
-          />
-        </div>
+      <div className="w-full max-w-xl px-4">
+        <Image src={pluris} alt="Pluris logo" className="object-contain" />
       </div>
       <Link
         className="w-full max-w-3xs text-center px-4 py-1 border-4 sm:mt-0 mt-6 border-feup text-feup font-bebas text-xl hover:border-transparent hover:cursor-pointer hover:bg-feup hover:text-white transition-colors rounded"
