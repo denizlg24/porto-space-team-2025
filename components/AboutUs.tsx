@@ -19,7 +19,7 @@ export default function Page() {
         <p>{t("about-us-p3")}</p>
         <Link
           className="self-end mt-auto px-4 py-1 border-4 border-feup text-feup font-bebas text-xl hover:border-transparent hover:cursor-pointer hover:bg-feup hover:text-white transition-colors rounded"
-          href={"/about-us"}
+          href={"/about"}
         >
           {t("know-more")}
         </Link>

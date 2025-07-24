@@ -125,7 +125,7 @@ export const InvictusDesc = () => {
 
     const observerBottom = new IntersectionObserver(
       ([entry]) => handleIntersection(entry, "down"),
-      { threshold: 0 }
+      { threshold: 0.5 }
     );
 
     if (topRef.current) observerTop.observe(topRef.current);
@@ -389,8 +389,8 @@ export const InvictusDesc = () => {
       </div>
       {/*CARD HERE*/}
       <Carousel
-        ref={bottomRef}
         opts={{ align: "center" }}
+        ref={bottomRef}
         className="w-full max-w-3xl px-2 sm:mx-8 mx-4"
         setApi={setApi}
       >

@@ -103,7 +103,7 @@ export default function Page() {
               {t("gold-sponsors")}
             </h2>
           </div>
-          <div className="flex md:flex-row flex-col sm:gap-16 gap-0 items-center justify-center w-[80%]">
+          <div className="grid grid-cols-2 gap-x-4 w-full max-w-3xl px-4 items-center justify-center">
             <div className="relative flex justify-center w-full lg:flex-1 max-w-xs h-32">
               <Image src={acl} alt="ACL Logo" fill className="object-contain" />
             </div>
