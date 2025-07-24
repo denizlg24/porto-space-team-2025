@@ -38,8 +38,8 @@ export default function Page() {
       </div>
       <div className="flex flex-col w-full max-w-3xl items-center py-12 px-4">
         <h1 className="text-feup font-bebas md:text-4xl sm:text-3xl text-2xl text-center">
-          Want to be a part of Porto Space Team?{" "}
-          <br className="sm:hidden block" /> Apply here!
+          {t("want-to-be-part")} <br className="sm:hidden block" />
+          {t("apply-here")}
         </h1>
         <ApplyForm />
       </div>
