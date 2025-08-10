@@ -39,14 +39,14 @@ export default function Header() {
 
   return (
     <header
-      className={`flex fixed top-0 z-99 flex-row items-center justify-between drop-shadow-2xl w-full transition-all ${
+      className={`flex fixed top-0 left-0 z-99 flex-row items-center justify-between drop-shadow-2xl w-screen ${
         isPageScrolled ? " bg-feup/25 backdrop-blur-3xl" : ""
       }`}
     >
-      <div className="w-full flex flex-row items-center justify-between p-2 mx-auto max-w-7xl">
+      <div className="w-screen flex flex-row items-center justify-between mx-auto max-w-7xl py-2">
         <Link
           href="/"
-          className="flex flex-col items-center justify-center w-fit"
+          className="flex flex-col items-center justify-center w-fit ml-2"
         >
           <Image
             src={logo}
@@ -62,30 +62,30 @@ export default function Header() {
             <NavigationMenuItem className="uppercase md:flex hidden">
               <NavigationMenuLink
                 href="/about"
-                className="bg-transparent! text-white font-bebas text-3xl translate-y-0.5 hover:text-feup!"
+                className="bg-transparent! text-white font-rajdhani font-semibold lg:text-2xl md:text-xl sm:text-lg text-base translate-y-0.5 hover:text-feup!"
               >
                 {t("nav-about")}
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem className="uppercase md:flex hidden">
-              <NavigationMenuTrigger className="uppercase p-2 h-full bg-transparent! text-white font-bebas text-3xl translate-y-0.5 hover:text-feup! data-[state=open]:text-feup!">
+              <NavigationMenuTrigger className="uppercase p-2 h-full bg-transparent! text-white font-rajdhani font-semibold  lg:text-2xl md:text-xl sm:text-lg text-base translate-y-0.5 hover:text-feup! data-[state=open]:text-feup!">
                 {t("nav-projects")}
               </NavigationMenuTrigger>
               <NavigationMenuContent className="uppercase flex w-full flex-col items-stretch min-w-[250px]">
                 <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center"
+                  className=" text-feup font-rajdhani font-semibold lg:text-lg text-base w-full text-center"
                   href="/projects/invictus"
                 >
                   {t("invictus")}
                 </NavigationMenuLink>
                 <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center"
+                  className=" text-feup font-rajdhani font-semibold lg:text-lg text-base w-full text-center"
                   href="/projects/icarus"
                 >
                   {t("icarus")}
                 </NavigationMenuLink>
                 <NavigationMenuLink
-                  className=" text-feup font-bebas text-2xl w-full text-center"
+                  className=" text-feup font-rajdhani font-semibold lg:text-lg text-base w-full text-center"
                   href="/projects/plutus"
                 >
                   {t("plutus")}
@@ -94,17 +94,17 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem className="uppercase items-center justify-center md:flex hidden">
               <NavigationMenuLink
-                className="bg-transparent! text-white font-bebas text-3xl translate-y-0.5 hover:text-feup!"
+                className="bg-transparent! text-white font-rajdhani font-semibold  lg:text-2xl md:text-xl sm:text-lg text-base translate-y-0.5 hover:text-feup!"
                 href="/sponsors"
               >
                 {t("nav-sponsors")}
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem className=" translate-y-0.5">
+            <NavigationMenuItem className=" translate-y-1">
               <LocaleSwitcher />
             </NavigationMenuItem>
             <NavigationMenuItem className="relative">
-              <div className="w-full h-full md:flex hidden items-center justify-center">
+              <div className="w-full h-full md:flex hidden items-center justify-center translate-y-0.5">
                 <Hamburger
                   size={24}
                   toggled={isOpen}
@@ -131,13 +131,13 @@ export default function Header() {
                     className="absolute bg-background w-[250px] flex flex-col gap-0.5 items-center p-2 right-1 z-99 rounded"
                   >
                     <NavigationMenuLink
-                      className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
+                      className=" text-feup font-rajdhani uppercase font-semibold lg:text-xl md:text-lg sm:text-base text-sm w-full text-center md:hidden block"
                       href="/about"
                     >
                       {t("nav-about")}
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      className=" text-feup font-bebas text-2xl w-full text-center md:hidden flex flex-col items-center justify-center relative"
+                      className=" text-feup font-rajdhani uppercase font-semibold lg:text-xl md:text-lg sm:text-base text-sm w-full text-center md:hidden flex flex-col items-center justify-center relative"
                       href="/projects"
                       onClick={(e) => {
                         e.preventDefault();
@@ -147,7 +147,7 @@ export default function Header() {
                       {t("nav-projects")}
                       <ChevronDown
                         className={
-                          "h-6! w-6! absolute translate-x-12 top-3 transition-transform duration-300 " +
+                          "h-5! w-5! absolute translate-x-13 top-2.5 transition-transform duration-300 text-feup" +
                           (isHamburgerProjectsToggled ? "rotate-180" : "")
                         }
                       />
@@ -164,7 +164,7 @@ export default function Header() {
                               onClick={(e) => {
                                 e.stopPropagation();
                               }}
-                              className=" text-foreground font-bebas text-xl w-full text-center"
+                              className=" text-foreground font-rajdhani uppercase font-semibold sm:text-sm text-xs w-full text-center"
                               href="/projects/invictus"
                             >
                               {t("invictus")}
@@ -173,7 +173,7 @@ export default function Header() {
                               onClick={(e) => {
                                 e.stopPropagation();
                               }}
-                              className=" text-foreground font-bebas text-xl w-full text-center"
+                              className=" text-foreground font-rajdhani uppercase font-semibold sm:text-sm text-xs w-full text-center"
                               href="/projects/icarus"
                             >
                               {t("icarus")}
@@ -182,7 +182,7 @@ export default function Header() {
                               onClick={(e) => {
                                 e.stopPropagation();
                               }}
-                              className=" text-foreground font-bebas text-xl w-full text-center"
+                              className=" text-foreground font-rajdhani uppercase font-semibold sm:text-sm text-xs w-full text-center"
                               href="/projects/plutus"
                             >
                               {t("plutus")}
@@ -193,31 +193,31 @@ export default function Header() {
                     </NavigationMenuLink>
 
                     <NavigationMenuLink
-                      className=" text-feup font-bebas text-2xl w-full text-center md:hidden block"
+                      className=" text-feup font-rajdhani uppercase font-semibold lg:text-xl md:text-lg sm:text-base text-sm w-full text-center md:hidden block"
                       href="/sponsors"
                     >
                       {t("nav-sponsors")}
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      className=" text-feup font-bebas text-2xl w-full text-center"
+                      className=" text-feup font-rajdhani uppercase font-semibold lg:text-xl md:text-lg sm:text-base text-sm w-full text-center"
                       href="/competitions"
                     >
                       {t("nav-competitions")}
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      className=" text-feup font-bebas text-2xl w-full text-center"
+                      className=" text-feup font-rajdhani uppercase font-semibold lg:text-xl md:text-lg sm:text-base text-sm w-full text-center"
                       href="/newsletter"
                     >
                       {t("nav-newsletter")}
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      className=" text-feup font-bebas text-2xl w-full text-center"
+                      className=" text-feup font-rajdhani uppercase font-semibold lg:text-xl md:text-lg sm:text-base text-sm w-full text-center"
                       href="/contact"
                     >
                       {t("nav-contact")}
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      className=" text-white font-bebas bg-feup text-2xl w-full text-center"
+                      className=" text-white font-rajdhani uppercase font-semibold bg-feup lg:text-xl md:text-lg sm:text-base text-sm w-full text-center"
                       href="/join"
                     >
                       {t("nav-join")}

@@ -43,7 +43,7 @@ export default function Page() {
     <main className="w-full flex flex-col items-center md:gap-8 gap-6">
       <div className="md:h-[calc(66vh)] h-[calc(33vh)] min-h-[375px] md:min-h-[550px] flex items-center justify-center relative w-full">
         <div className="w-full absolute flex flex-col items-center justify-center p-1 z-10 max-w-7xl gap-4 sm:px-12 px-8">
-          <h1 className="uppercase w-full text-center text-white lg:text-8xl sm:text-6xl text-4xl font-bebas drop-shadow-2xl">
+          <h1 className="uppercase w-full text-center text-white lg:text-8xl sm:text-6xl text-4xl font-rajdhani font-bold drop-shadow-2xl">
             {t("nav-competitions")}
           </h1>
         </div>
@@ -58,12 +58,12 @@ export default function Page() {
       </div>
       <div className="flex flex-col items-center justify-start sm:p-8 p-2 relative w-full gap-8">
         <div className="w-full z-10 max-w-7xl gap-4 px-4">
-          <h1 className="uppercase w-full max-w-md mx-auto text-center text-white lg:text-8xl sm:text-6xl text-4xl font-bebas pb-2 border-b-2 border-b-white">
+          <h1 className="uppercase w-full max-w-md mx-auto text-center text-white lg:text-8xl sm:text-6xl text-4xl font-rajdhani font-bold pb-2 border-b-2 border-b-white">
             EUROC
           </h1>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 w-full max-w-5xl mx-auto gap-4 rounded-lg bg-black/50 sm:p-6 p-4 z-10 items-center">
-          <div className="w-full flex flex-col gap-4 col-span-1 text-left text-white font-arimo font-semibold lg:text-xl md:text-lg sm:text-base text-sm">
+          <div className="w-full flex flex-col gap-4 col-span-1 text-left text-white font-inter font-normal lg:text-xl md:text-lg sm:text-base text-sm">
             <p>{t("euroc-p1")}</p>
             <p>{t("euroc-p2")}</p>
           </div>
@@ -76,7 +76,7 @@ export default function Page() {
             <Button
               asChild
               variant={"outline"}
-              className="bg-transparent text-white uppercase"
+              className="bg-transparent text-white uppercase font-inter"
             >
               <Link href={"https://euroc.pt"} target="_blank">
                 {t("euroc-website")}
@@ -97,13 +97,13 @@ export default function Page() {
       <div className="w-full flex flex-col gap-8 px-4 pb-12">
         <div className="grid sm:grid-cols-2 grid-cols-1 w-full max-w-5xl mx-auto gap-6">
           <div className="col-span-1 w-full flex flex-col gap-4 text-left">
-            <h2 className="font-bebas font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-feup">
+            <h2 className="font-rajdhani font-bold lg:text-4xl md:text-3xl sm:text-2xl text-xl text-feup">
               EUROC 23&apos;
             </h2>
-            <p className="font-arimo text-black lg:text-xl md:text-lg sm:text-base text-sm">
+            <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
               {t("euroc-23-p1")}
             </p>
-            <p className="font-arimo text-black lg:text-xl md:text-lg sm:text-base text-sm">
+            <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
               {t("euroc-23-p2")}
             </p>
           </div>
@@ -116,31 +116,31 @@ export default function Page() {
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 w-full max-w-5xl mx-auto gap-6 items-center">
-          <div className="col-span-1 w-full">
+          <div className="col-span-1 w-full sm:order-1 order-2">
             <Image
               src={sidePicture2}
               className="w-full h-auto max-h-[500px] object-cover object-[50%_80%] rounded"
               alt="side picture 1"
             />
           </div>
-          <div className="col-span-1 w-full flex flex-col gap-4 text-left">
-            <h2 className="font-bebas font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-feup">
+          <div className="col-span-1 w-full flex flex-col gap-4 text-left sm:order-2 order-1">
+            <h2 className="font-rajdhani font-bold lg:text-4xl md:text-3xl sm:text-2xl text-xl text-feup">
               EUROC 24&apos;
             </h2>
-            <p className="font-arimo text-black lg:text-xl md:text-lg sm:text-base text-sm">
+            <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
               {t("euroc-24-p1")}
             </p>
-            <p className="font-arimo text-black lg:text-xl md:text-lg sm:text-base text-sm">
+            <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
               {t("euroc-24-p2")}
             </p>
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 w-full max-w-5xl mx-auto gap-6">
           <div className="col-span-1 w-full flex flex-col gap-4 text-left">
-            <h2 className="font-bebas font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-feup">
+            <h2 className="font-rajdhani font-bold lg:text-4xl md:text-3xl sm:text-2xl text-xl text-feup">
               EUROC 25&apos;
             </h2>
-            <p className="font-arimo text-black lg:text-xl md:text-lg sm:text-base text-sm">
+            <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
               {t("coming-soon")}
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function Page() {
       </div>
       <div className="flex flex-col items-center justify-start sm:p-8 p-2 relative w-full gap-8">
         <div className="w-full z-10 max-w-7xl gap-4 px-4">
-          <h1 className="uppercase w-full max-w-md mx-auto text-center text-white lg:text-7xl sm:text-6xl text-4xl font-bebas pb-2 border-b-2 border-b-white">
+          <h1 className="uppercase w-full max-w-md mx-auto text-center text-white lg:text-6xl sm:text-4xl text-3xl font-rajdhani font-bold pb-2 border-b-2 border-b-white">
             CUBESAT PORTUGAL
           </h1>
         </div>
@@ -162,7 +162,7 @@ export default function Page() {
             <Button
               asChild
               variant={"outline"}
-              className="bg-transparent text-white uppercase"
+              className="bg-transparent text-white uppercase font-inter"
             >
               <Link
                 href={"https://ptspace.pt/pt/cubesat-portugal"}
@@ -173,7 +173,7 @@ export default function Page() {
               </Link>
             </Button>
           </div>
-          <div className="w-full flex flex-col gap-4 col-span-1 text-left text-white font-arimo font-semibold lg:text-xl md:text-lg sm:text-base text-sm">
+          <div className="w-full flex flex-col gap-4 col-span-1 text-left text-white font-inter font-normal lg:text-xl md:text-lg sm:text-base text-sm">
             <p>{t("cubesat-p1")}</p>
             <p>{t("cubesat-p2")}</p>
           </div>
@@ -188,16 +188,16 @@ export default function Page() {
         />
       </div>
       <div className="flex flex-col gap-2 w-full max-w-5xl mx-auto pb-12 px-4">
-        <h1 className="text-feup font-bold lg:text-7xl md:text-6xl sm:text-5xl text-3xl font-bebas">
+        <h1 className="text-feup font-bold lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-rajdhani">
           BOOTCAMP 2025
         </h1>
-        <p className="font-arimo text-black lg:text-lg md:text-base sm:text-sm text-xs">
+        <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
           {t("bootcamp-p1")}
         </p>
-        <p className="font-arimo text-black lg:text-lg md:text-base sm:text-sm text-xs">
+        <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
           {t("bootcamp-p2")}
         </p>
-        <p className="font-arimo text-black lg:text-lg md:text-base sm:text-sm text-xs">
+        <p className="font-inter text-black lg:text-lg md:text-base sm:text-sm text-xs">
           {t("bootcamp-p3")}
         </p>
         <Carousel>

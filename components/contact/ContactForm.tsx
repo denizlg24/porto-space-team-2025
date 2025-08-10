@@ -75,7 +75,7 @@ export function ContactForm() {
                 {t("contact-name")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Mary Jane" {...field} />
+                <Input placeholder={t("contact-placeholder-name")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -88,7 +88,10 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>{t("contact-company")}</FormLabel>
               <FormControl>
-                <Input placeholder="INEGI" {...field} />
+                <Input
+                  placeholder={t("contact-placeholder-company")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -103,7 +106,10 @@ export function ContactForm() {
                 {t("contact-email")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="example@company.com" {...field} />
+                <Input
+                  placeholder={t("contact-placeholder-email")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -118,7 +124,10 @@ export function ContactForm() {
                 {t("contact-subject")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Possible partnership" {...field} />
+                <Input
+                  placeholder={t("contact-subject-placeholder")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -134,7 +143,7 @@ export function ContactForm() {
               </FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="..."
+                  placeholder={t("contact-message-placeholder")}
                   className="resize-none h-32"
                   {...field}
                 />
@@ -144,12 +153,12 @@ export function ContactForm() {
           )}
         />
         {isLoading ? (
-          <Button className="bg-feup hover:cursor-pointer" disabled>
+          <Button className="bg-feup hover:cursor-pointer w-full" disabled>
             <Loader2Icon className="animate-spin" />
             {t("send-loading")}
           </Button>
         ) : (
-          <Button type="submit" className="bg-feup hover:cursor-pointer">
+          <Button type="submit" className="bg-feup hover:cursor-pointer w-full">
             {t("contact-send")}
           </Button>
         )}

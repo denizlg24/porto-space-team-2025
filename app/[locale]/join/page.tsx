@@ -23,7 +23,7 @@ export default function Page() {
     <main className="w-full flex flex-col items-center">
       <div className="md:h-[calc(66vh)] h-[calc(33vh)] min-h-[375px] md:min-h-[550px] flex items-center justify-center relative w-full">
         <div className="w-full absolute flex flex-col items-center justify-center p-1 z-10 max-w-7xl gap-4 sm:px-12 px-8">
-          <h1 className="uppercase w-full text-center text-white lg:text-8xl sm:text-6xl text-4xl font-bebas drop-shadow-2xl">
+          <h1 className="uppercase w-full text-center text-white lg:text-8xl sm:text-6xl text-4xl font-rajdhani font-bold drop-shadow-2xl">
             {t("nav-join")}
           </h1>
         </div>
@@ -37,8 +37,8 @@ export default function Page() {
         />
       </div>
       <div className="flex flex-col w-full max-w-3xl items-center py-12 px-4">
-        <h1 className="text-feup font-bebas md:text-4xl sm:text-3xl text-2xl text-center">
-          {t("want-to-be-part")} <br className="sm:hidden block" />
+        <h1 className="text-feup font-rajdhani font-bold md:text-3xl sm:text-2xl text-base text-center">
+          {t("want-to-be-part")} <br className="" />
           {t("apply-here")}
         </h1>
         <ApplyForm />

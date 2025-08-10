@@ -23,7 +23,7 @@ export default function Page() {
     <main className="w-full flex flex-col items-center">
       <div className="md:h-[calc(66vh)] h-[calc(33vh)] min-h-[375px] md:min-h-[550px] flex items-center justify-center relative w-full">
         <div className="w-full absolute flex flex-col items-center justify-center p-1 z-10 max-w-7xl gap-4 sm:px-12 px-8">
-          <h1 className="uppercase w-full text-center text-white lg:text-8xl sm:text-6xl text-4xl font-bebas drop-shadow-2xl">
+          <h1 className="uppercase w-full text-center text-white font-bold lg:text-8xl sm:text-6xl text-4xl font-rajdhani drop-shadow-2xl">
             {t("nav-contact")}
           </h1>
         </div>

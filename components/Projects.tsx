@@ -5,7 +5,7 @@ export default function Page() {
   const t = useTranslations("common");
   return (
     <section className="w-full flex flex-col items-center p-4 pt-8">
-      <h1 className="font-bebas text-6xl text-feup uppercase">
+      <h1 className="font-rajdhani font-bold lg:text-6xl md:text-5xl text-4xl text-feup uppercase">
         {t("projects")}
       </h1>
       <div className="w-full max-w-6xl flex flex-col items-center gap-8 mt-10">

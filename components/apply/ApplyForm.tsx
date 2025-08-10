@@ -142,7 +142,7 @@ export function ApplyForm() {
                 {t("contact-name")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Mary Jane" {...field} />
+                <Input placeholder={t("contact-placeholder-name")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -159,7 +159,7 @@ export function ApplyForm() {
               <FormControl>
                 <Input
                   type="email"
-                  placeholder="example@company.com"
+                  placeholder={t("contact-placeholder-email")}
                   {...field}
                 />
               </FormControl>
@@ -176,7 +176,10 @@ export function ApplyForm() {
                 {t("contact-phone")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="926316228" {...field} />
+                <Input
+                  placeholder={t("contact-placeholder-phone")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -191,7 +194,7 @@ export function ApplyForm() {
                 {t("contact-up-number")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="up202208453" {...field} />
+                <Input placeholder={t("contact-placeholder-up")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -206,7 +209,10 @@ export function ApplyForm() {
                 {t("contact-course")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="L.EIC" {...field} />
+                <Input
+                  placeholder={t("contact-placeholder-university-course")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -221,7 +227,10 @@ export function ApplyForm() {
                 {t("contact-year")} <span className="text-feup">*</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="2nd" {...field} />
+                <Input
+                  placeholder={t("contact-placeholder-university-year")}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -285,12 +294,12 @@ export function ApplyForm() {
           )}
         />
         {isLoading ? (
-          <Button className="bg-feup hover:cursor-pointer" disabled>
+          <Button className="bg-feup hover:cursor-pointer w-full" disabled>
             <Loader2Icon className="animate-spin" />
             {t("send-loading")}
           </Button>
         ) : (
-          <Button type="submit" className="bg-feup hover:cursor-pointer">
+          <Button type="submit" className="bg-feup hover:cursor-pointer w-full">
             {t("contact-send")}
           </Button>
         )}

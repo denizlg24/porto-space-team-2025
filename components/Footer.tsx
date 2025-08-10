@@ -8,20 +8,20 @@ export default function Footer() {
   return (
     <footer className="w-full bg-feup p-6 flex md:flex-row flex-col justify-between gap-4">
       <div className="flex flex-col gap-1">
-        <h1 className="text-white font-bebas sm:text-3xl text-2xl">
+        <h1 className="text-white font-rajdhani font-bold lg:text-2xl sn:text-xl text-lg">
           PORTO SPACE TEAM
         </h1>
-        <h2 className="text-white font-arimo sm:text-2xl text-lg">
+        <h2 className="text-white font-poppins lg:text-xl sm:text-lg text-base">
           {t("contacts")}
         </h2>
-        <div className="flex flex-row items-end gap-2 text-white font-arimo text-lg">
-          <CiLocationOn className="w-6! h-6!" />
+        <div className="flex flex-row items-end gap-2 text-white font-inter sm:text-lg text-base">
+          <CiLocationOn className="w-6! h-6! min-w-6!" />
           <p className="sm:text-base text-xs truncate">
             Rua Dr. Roberto Frias, s/n, DEMec, 4200-465 Porto, Portugal
           </p>
         </div>
-        <div className="flex flex-row items-center gap-4 text-white font-arimo text-lg">
-          <CiMail className="w-6! h-6!" />
+        <div className="flex flex-row items-center gap-2 text-white font-inter sm:text-lg text-base">
+          <CiMail className="w-6! h-6! min-w-6!" />
           <p className="sm:text-base text-xs">geral@portospaceteam.pt</p>
         </div>
       </div>

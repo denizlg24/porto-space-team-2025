@@ -7,6 +7,11 @@
   --color-feup: #8c2d19;
   --font-bebas: var(--font-bebas);
   --font-arimo: var(--font-arimo);
+  --font-inter: var(--font-inter);
+  --font-rajdhani: var(--var-rajdhani);
+  --font-barlow: var(--font-barlow);
+  --font-poppins: var(--font-poppins);
+  --font-dida: var(--font-dida);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

@@ -17,7 +17,7 @@ export default function Section() {
           {t("members")}
         </h2>
         <p className="font-bold lg:text-5xl md:text-4xl text-2xl">
-          <AnimatedCounter targetNumber={90} suffix="+" />
+          <AnimatedCounter targetNumber={70} suffix="+" />
         </p>
       </div>
       <div className="flex flex-col items-center font-arimo uppercase flex-1">
