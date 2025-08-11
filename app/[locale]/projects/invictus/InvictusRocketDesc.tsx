@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import invictusRocket from "@/public/project/invictus-rocket.png";
 import { Card } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
-import { cn } from "@/lib/utils";
 import aero1 from "@/public/project/aero/1.jpg";
 import aero2 from "@/public/project/aero/2.jpg";
 import aero3 from "@/public/project/aero/3.jpg";
@@ -112,7 +111,7 @@ export function RocketScroll() {
   const rocketRef = useRef(null);
   const sectionsRefs = useRef<HTMLElement[]>([]);
   sectionsRefs.current = [];
-  const [activeSection, setActiveSection] = useState(1);
+  //const [activeSection, setActiveSection] = useState(1);
 
   const addToRefs = (el: HTMLElement | null) => {
     if (el && !sectionsRefs.current.includes(el)) {
@@ -123,7 +122,7 @@ export function RocketScroll() {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    sectionsRefs.current.forEach((section, i) => {
+    sectionsRefs.current.forEach((section) => {
       gsap.fromTo(
         section,
         { autoAlpha: 0, y: 40 },
@@ -135,8 +134,8 @@ export function RocketScroll() {
             trigger: section,
             start: "top center",
             end: "bottom center",
-            onEnter: () => setActiveSection(i + 1),
-            onEnterBack: () => setActiveSection(i + 1),
+            //onEnter: () => setActiveSection(i + 1),
+            //onEnterBack: () => setActiveSection(i + 1),
             toggleActions: "play reverse play reverse",
             // markers: true,
           },
@@ -162,8 +161,7 @@ export function RocketScroll() {
             alt="invictus rocket"
             className="h-full w-auto object-contain"
           />
-
-          <div
+          {/*<div
             className={cn(
               "transition-all absolute w-[90%] -right-1/3 sm:h-0.5 h-0.25 bg-white flex flex-row justify-end items-center top-[37%]",
               activeSection == 1 && "top-[37%]",
@@ -175,7 +173,7 @@ export function RocketScroll() {
             )}
           >
             <div className="sm:w-2 sm:h-2 w-1 h-1 bg-white rounded-full"></div>
-          </div>
+          </div>*/}
         </div>
       </div>
       <div

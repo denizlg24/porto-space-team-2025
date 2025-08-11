@@ -56,7 +56,7 @@ export function IcarusScroll() {
     sectionsRefs.current.forEach((section) => {
       gsap.fromTo(
         section,
-        { autoAlpha: 0, y: 40 },
+        { autoAlpha: 0, y: 10 },
         {
           autoAlpha: 1,
           y: 0,
@@ -81,8 +81,8 @@ export function IcarusScroll() {
     <div className="relative flex w-full max-w-4xl mx-auto px-4">
       <div
         ref={containerRef}
-        className="flex-1 max-w-4xl mx-auto py-20 space-y-40"
-        style={{ minHeight: "200vh" }}
+        className="flex-1 max-w-4xl mx-auto py-20 space-y-4"
+        style={{ minHeight: "50px" }}
       >
         {sections.map((section) => (
           <Card
