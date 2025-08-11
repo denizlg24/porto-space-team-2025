@@ -14,6 +14,7 @@ import avio2 from "@/public/project/avio/2.jpg";
 import avio3 from "@/public/project/avio/3.jpg";
 import strut1 from "@/public/project/strut/1.jpg";
 import strut2 from "@/public/project/strut/2.jpg";
+import strut3 from "@/public/project/strut/3.jpg";
 import ground1 from "@/public/project/ground/1.jpg";
 import ground2 from "@/public/project/ground/2.jpg";
 import ground3 from "@/public/project/ground/3.jpg";
@@ -52,7 +53,7 @@ export function RocketScroll() {
         t("structures-r-4"),
         t("structures-r-5"),
       ],
-      images: [strut1, strut2],
+      images: [strut1, strut3, strut2],
     },
     {
       id: 3,
