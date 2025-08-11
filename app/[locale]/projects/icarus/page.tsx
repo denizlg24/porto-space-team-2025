@@ -33,7 +33,7 @@ export async function generateMetadata({
 export default function Page() {
   const t = useTranslations("common");
   return (
-    <main className="relative flex flex-col items-center gap-16 pt-12 w-full outline-0! ring-0!">
+    <main className="relative flex flex-col items-center sm:gap-16 gap-8 py-12 w-full outline-0! ring-0! px-4 overflow-x-hidden">
       <h1 className="sm:mt-32 mt-16 w-full max-w-xs pb-4 text-center text-white font-rajdhani font-bold lg:text-7xl md:text-6xl sm:text-5xl text-4xl border-b-2 border-feup">
         {t("icarus")}
       </h1>
@@ -140,12 +140,11 @@ export default function Page() {
       <Image
         src={bg}
         alt="cover photo"
-        fill
         priority
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 300vw"
-        className="w-full h-auto object-cover -z-10 max-h-screen !fixed"
+        className="w-full h-full object-cover -z-10 max-h-screen fixed! bottom-0!"
       />
-      <div className="w-full object-cover -z-10 h-screen !fixed top-0 bg-[#041322]/75"></div>
+      <div className="w-full object-cover -z-10 h-full bg-[#041322]/75 fixed! bottom-0!"></div>
     </main>
   );
 }
