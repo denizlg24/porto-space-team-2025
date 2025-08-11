@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import bg from "@/public/sponsors/Fundo_azul.png";
 import invictus from "@/public/project/INVICTUS.svg";
-import { Metadata } from "next";
 import pluris from "@/public/sponsors/diamond/Logo_Pluris_2.png";
 import acl from "@/public/sponsors/gold/acl-group-logotipo.png";
 import euroCircuits from "@/public/sponsors/gold/Eurocircuits.png";
@@ -30,18 +29,24 @@ import fadeup from "@/public/sponsors/institutional/FADEUP.webp";
 import demm from "@/public/sponsors/institutional/demm.svg";
 import cenfim from "@/public/sponsors/institutional/cenfim.png";
 
-export const metadata: Metadata = {
-  title: "Porto Space Team | Sponsors",
-  description:
-    "Discover Porto Space Team, a student-led aerospace association at FEUP, pioneering hybrid-propellant rocket development and space research in Portugal.",
-  keywords: [
-    "Porto Space Team",
-    "FEUP aerospace students",
-    "hybrid rocket Portugal",
-    "student rocketry",
-    "aerospace engineering Porto",
-  ],
-};
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const t = await getTranslations({
+    locale: (await params).locale,
+    namespace: "metadata",
+  });
+
+  return {
+    title: t("sponsors-title"),
+    description: t("sponsors-description"),
+    keywords: t("sponsors-keywords").split(","),
+  };
+}
 
 export default function Page() {
   const t = useTranslations("common");

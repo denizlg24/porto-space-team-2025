@@ -1,21 +1,26 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import bg from "@/public/contact/Fundo_Azul.png";
-import { Metadata } from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
 
-export const metadata: Metadata = {
-  title: "Porto Space Team | Contact",
-  description:
-    "Discover Porto Space Team, a student-led aerospace association at FEUP, pioneering hybrid-propellant rocket development and space research in Portugal.",
-  keywords: [
-    "Porto Space Team",
-    "FEUP aerospace students",
-    "hybrid rocket Portugal",
-    "student rocketry",
-    "aerospace engineering Porto",
-  ],
-};
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const t = await getTranslations({
+    locale: (await params).locale,
+    namespace: "metadata",
+  });
+
+  return {
+    title: t("contact-title"),
+    description: t("contact-description"),
+    keywords: t("contact-keywords").split(","),
+  };
+}
 
 export default function Page() {
   const t = useTranslations("common");

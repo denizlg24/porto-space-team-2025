@@ -1,18 +1,22 @@
-import { Metadata } from "next";
 import { AboutAnimatedPage } from "@/components/about/AboutAnimatedPage";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Porto Space Team | About",
-  description:
-    "Discover Porto Space Team, a student-led aerospace association at FEUP, pioneering hybrid-propellant rocket development and space research in Portugal.",
-  keywords: [
-    "Porto Space Team",
-    "FEUP aerospace students",
-    "hybrid rocket Portugal",
-    "student rocketry",
-    "aerospace engineering Porto",
-  ],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const t = await getTranslations({
+    locale: (await params).locale,
+    namespace: "metadata",
+  });
+
+  return {
+    title: t("about-title"),
+    description: t("about-description"),
+    keywords: t("about-keywords").split(","),
+  };
+}
 
 export default function Page() {
   return <AboutAnimatedPage />;

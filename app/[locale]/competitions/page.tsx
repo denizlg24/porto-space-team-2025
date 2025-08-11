@@ -12,7 +12,6 @@ import team2 from "@/public/competitons/2.jpg";
 import team3 from "@/public/competitons/3.jpg";
 import team4 from "@/public/competitons/4.jpg";
 import team5 from "@/public/competitons/5.jpg";
-import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRightFromSquare } from "lucide-react";
@@ -23,19 +22,24 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Porto Space Team | Competitions",
-  description:
-    "Discover Porto Space Team, a student-led aerospace association at FEUP, pioneering hybrid-propellant rocket development and space research in Portugal.",
-  keywords: [
-    "Porto Space Team",
-    "FEUP aerospace students",
-    "hybrid rocket Portugal",
-    "student rocketry",
-    "aerospace engineering Porto",
-  ],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const t = await getTranslations({
+    locale: (await params).locale,
+    namespace: "metadata",
+  });
+
+  return {
+    title: t("competitions-title"),
+    description: t("competitions-description"),
+    keywords: t("competitions-keywords").split(","),
+  };
+}
 
 export default function Page() {
   const t = useTranslations("common");

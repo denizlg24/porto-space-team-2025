@@ -191,5 +191,42 @@
     "contact-placeholder-university-course": "ex.: Engenharia Informática",
     "contact-placeholder-phone": "ex.: +351 912 345 678",
     "contact-placeholder-university-year": "ex.: 2.º ano"
+  },
+  "metadata": {
+    "about-title": "Porto Space Team | Sobre",
+    "about-description": "Saiba mais sobre a Porto Space Team, uma associação estudantil de engenharia aeroespacial na FEUP, dedicada ao desenvolvimento de tecnologia de foguetes híbridos e à inspiração da próxima geração de engenheiros espaciais em Portugal.",
+    "about-keywords": "Porto Space Team, estudantes de engenharia aeroespacial FEUP, foguete híbrido Portugal, foguetes estudantis, engenharia aeroespacial Porto, pesquisa espacial Portugal",
+
+    "competitions-title": "Porto Space Team | Competições",
+    "competitions-description": "Explore as competições onde a Porto Space Team demonstra a sua engenharia, desde desafios nacionais de foguetaria a eventos aeroespaciais internacionais.",
+    "competitions-keywords": "competições Porto Space Team, desafios de foguetaria, concursos aeroespaciais Portugal, competições de foguetes estudantis, equipa de engenharia FEUP",
+
+    "contact-title": "Porto Space Team | Contacto",
+    "contact-description": "Entre em contacto com a Porto Space Team para colaborações, patrocínios ou pedidos de imprensa.",
+    "contact-keywords": "contactar Porto Space Team, contacto engenharia aeroespacial FEUP, contacto foguetaria estudantil, patrocínio equipa de foguetes, contacto engenharia aeroespacial Porto",
+
+    "apply-title": "Porto Space Team | Candidatar-se",
+    "apply-description": "Junte-se à Porto Space Team e faça parte de um grupo apaixonado de estudantes que moldam o futuro da engenharia aeroespacial em Portugal.",
+    "apply-keywords": "candidatar-se Porto Space Team, juntar-se engenharia aeroespacial FEUP, candidatura equipa de foguetes, estudantes de engenharia aeroespacial, recrutamento equipa de foguetes",
+
+    "newsletter-title": "Porto Space Team | Newsletter",
+    "newsletter-description": "Subscreva a newsletter da Porto Space Team para receber as últimas novidades sobre projetos, competições e eventos.",
+    "newsletter-keywords": "newsletter Porto Space Team, notícias aeroespaciais Portugal, atualizações foguetaria estudantil, newsletter engenharia aeroespacial FEUP, eventos de foguetaria Portugal",
+
+    "icarus-title": "Porto Space Team | Icarus",
+    "icarus-description": "O Icarus é o foguete híbrido pioneiro da Porto Space Team, desenvolvido para expandir os limites da engenharia aeroespacial estudantil em Portugal.",
+    "icarus-keywords": "foguete Icarus, projeto Porto Space Team, foguete híbrido Portugal, projeto aeroespacial estudantil, engenharia de foguetes FEUP",
+
+    "invictus-title": "Porto Space Team | Invictus",
+    "invictus-description": "O Invictus é um projeto avançado de foguete da Porto Space Team, concebido para lançamentos de alto desempenho e competições de foguetaria.",
+    "invictus-keywords": "foguete Invictus, projeto Porto Space Team, foguete de alto desempenho Portugal, competição de foguetaria estudantil, engenharia aeroespacial FEUP",
+
+    "plutus-title": "Porto Space Team | Plutus",
+    "plutus-description": "O Plutus centra-se no desenvolvimento de sistemas de propulsão sustentáveis e tecnologias aeroespaciais inovadoras para futuras missões espaciais.",
+    "plutus-keywords": "projeto Plutus, Porto Space Team, propulsão sustentável de foguetes, tecnologia aeroespacial Portugal, engenharia espacial estudantil",
+
+    "sponsors-title": "Porto Space Team | Patrocinadores",
+    "sponsors-description": "Conheça os patrocinadores que apoiam a missão da Porto Space Team de inovar na área de foguetaria e engenharia aeroespacial.",
+    "sponsors-keywords": "patrocinadores Porto Space Team, patrocínio aeroespacial Portugal, financiamento de foguetes estudantis, patrocinadores engenharia aeroespacial FEUP, apoio a projetos aeroespaciais"
   }
 }

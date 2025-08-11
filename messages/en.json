@@ -191,5 +191,42 @@
     "contact-placeholder-university-course": "e.g., Computer Engineering",
     "contact-placeholder-phone": "e.g., +351 912 345 678",
     "contact-placeholder-university-year": "e.g., 2nd year"
+  },
+  "metadata": {
+    "about-title": "Porto Space Team | About",
+    "about-description": "Learn about Porto Space Team, a student-led aerospace association at FEUP, dedicated to advancing hybrid-propellant rocket technology and inspiring the next generation of Portuguese space engineers.",
+    "about-keywords": "Porto Space Team, FEUP aerospace students, hybrid rocket Portugal, student rocketry, aerospace engineering Porto, space research Portugal",
+
+    "competitions-title": "Porto Space Team | Competitions",
+    "competitions-description": "Explore the competitions where Porto Space Team showcases its engineering, from national rocketry challenges to international aerospace events.",
+    "competitions-keywords": "Porto Space Team competitions, rocketry challenges, aerospace contests Portugal, student rocket competitions, FEUP engineering team",
+
+    "contact-title": "Porto Space Team | Contact",
+    "contact-description": "Get in touch with Porto Space Team for collaborations, sponsorships, or media inquiries.",
+    "contact-keywords": "contact Porto Space Team, FEUP aerospace contact, student rocketry contact, rocket team sponsorship, aerospace engineering Porto contact",
+
+    "apply-title": "Porto Space Team | Apply",
+    "apply-description": "Join Porto Space Team and be part of a passionate group of students shaping the future of aerospace in Portugal.",
+    "apply-keywords": "apply Porto Space Team, join FEUP aerospace, student rocket team application, aerospace engineering students, rocket team recruitment",
+
+    "newsletter-title": "Porto Space Team | Newsletter",
+    "newsletter-description": "Subscribe to the Porto Space Team newsletter for the latest updates on projects, competitions, and events.",
+    "newsletter-keywords": "Porto Space Team newsletter, aerospace news Portugal, student rocket updates, FEUP aerospace newsletter, rocketry events Portugal",
+
+    "icarus-title": "Porto Space Team | Icarus",
+    "icarus-description": "Icarus is Porto Space Team's pioneering hybrid-propellant rocket, developed to push the boundaries of student aerospace engineering in Portugal.",
+    "icarus-keywords": "Icarus rocket, Porto Space Team project, hybrid rocket Portugal, student aerospace project, FEUP rocket engineering",
+
+    "invictus-title": "Porto Space Team | Invictus",
+    "invictus-description": "Invictus is an advanced rocket initiative by Porto Space Team, designed for high-performance launches and competitive rocketry events.",
+    "invictus-keywords": "Invictus rocket, Porto Space Team project, high-performance rocket Portugal, student rocketry competition, aerospace engineering FEUP",
+
+    "plutus-title": "Porto Space Team | Plutus",
+    "plutus-description": "Plutus focuses on developing sustainable propulsion systems and innovative aerospace technologies for future space missions.",
+    "plutus-keywords": "Plutus project, Porto Space Team, sustainable rocket propulsion, aerospace technology Portugal, student space engineering",
+
+    "sponsors-title": "Porto Space Team | Sponsors",
+    "sponsors-description": "Meet the sponsors who support Porto Space Team's mission to innovate in rocketry and aerospace engineering.",
+    "sponsors-keywords": "Porto Space Team sponsors, aerospace sponsorship Portugal, student rocket funding, FEUP aerospace sponsors, support aerospace projects"
   }
 }
