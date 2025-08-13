@@ -334,16 +334,6 @@ export default function Page() {
               className="object-contain col-span-1 w-full mx-auto lg:max-w-[160px] md:max-w-[140px] sm:max-w-[120px] max-w-[100px] h-auto"
             />
           </a>
-          <a
-            href="https://sigarra.up.pt/feup/en/uni_geral.unidade_view?pv_unidade=12"
-            target="_blank"
-          >
-            <Image
-              src={demm}
-              alt="DeEmm logo"
-              className="object-contain col-span-1 w-full mx-auto lg:max-w-[160px] md:max-w-[140px] sm:max-w-[120px] max-w-[100px] h-auto"
-            />
-          </a>
           <a href="https://deq.fe.up.pt" target="_blank">
             <Image
               src={deq}
@@ -351,11 +341,15 @@ export default function Page() {
               className="object-contain col-span-1 w-full mx-auto lg:max-w-[200px] md:max-w-[180px] sm:max-w-[160px] max-w-[140px] h-auto"
             />
           </a>
-          <a href="https://www.up.pt/fadeup/pt" target="_blank">
+          <a
+            href="https://www.up.pt/fadeup/pt"
+            target="_blank"
+            className="col-span-2"
+          >
             <Image
               src={fadeup}
               alt="FADEUP logo"
-              className="object-contain col-span-1 w-full mx-auto lg:max-w-[200px] md:max-w-[180px] sm:max-w-[160px] max-w-[140px] h-auto"
+              className="object-contain col-span-2 w-full mx-auto lg:max-w-[200px] md:max-w-[180px] sm:max-w-[160px] max-w-[140px] h-auto mt-8"
             />
           </a>
         </div>
