@@ -26,7 +26,6 @@ import weg from "@/public/sponsors/icarus/weg.webp";
 import demec from "@/public/sponsors/institutional/DeMec.svg";
 import deq from "@/public/sponsors/institutional/Dep Quimica.svg";
 import fadeup from "@/public/sponsors/institutional/FADEUP.webp";
-import demm from "@/public/sponsors/institutional/demm.svg";
 import cenfim from "@/public/sponsors/institutional/cenfim.png";
 
 import { getTranslations } from "next-intl/server";
