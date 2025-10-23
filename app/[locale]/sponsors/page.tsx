@@ -7,7 +7,7 @@ import acl from "@/public/sponsors/gold/acl-group-logotipo.png";
 import euroCircuits from "@/public/sponsors/gold/Eurocircuits.png";
 import inox from "@/public/sponsors/silver/INOXCOM.svg";
 import bluetti from "@/public/sponsors/silver/bluetti-power-logo-vector.svg";
-//import inesctec from "@/public/sponsors/silver/INESCTECLogotipo_CORPositivo_RGB-1-1024x300.png";
+import inesctec from "@/public/sponsors/silver/INESCTECLogotipo_CORPositivo_RGB-1-1024x300.png";
 import mauser from "@/public/sponsors/silver/Mauser.svg";
 import lojaIndustria from "@/public/sponsors/silver/logo-lojaindustria.png";
 import biogerm from "@/public/sponsors/silver/logo-slider-2x-500x600.png";
@@ -27,6 +27,17 @@ import demec from "@/public/sponsors/institutional/DeMec.svg";
 import deq from "@/public/sponsors/institutional/Dep Quimica.svg";
 import fadeup from "@/public/sponsors/institutional/FADEUP.webp";
 import cenfim from "@/public/sponsors/institutional/cenfim.png";
+
+//new bronze
+import orion from "@/public/sponsors/bronze/Orion Technik.png";
+import gleal from "@/public/sponsors/bronze/G.Leal.png";
+//new silver
+import antonio from "@/public/sponsors/silver/António Moutinho.png";
+import isma from "@/public/sponsors/silver/ISMA.png";
+import amob from "@/public/sponsors/silver/Amob.svg";
+//new gold
+import hypermetal from "@/public/sponsors/gold/Hypermetal.png";
+import einhell from "@/public/sponsors/gold/Einhell_Germany_logo.svg";
 
 import { getTranslations } from "next-intl/server";
 
@@ -130,6 +141,27 @@ export default function Page() {
                 />
               </div>
             </a>
+            <div className="h-6 col-span-full"></div>
+            <a href="https://hypermetal.eu/en/home" target="_blank">
+              <div className="relative flex justify-center w-full lg:flex-1 max-w-xs h-32">
+                <Image
+                  src={hypermetal}
+                  alt="Hypermetal Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </a>
+            <a href="https://www.einhell.pt" target="_blank">
+              <div className="relative flex justify-center w-full lg:flex-1 max-w-xs h-32">
+                <Image
+                  src={einhell}
+                  alt="Einhell logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </a>
           </div>
         </section>
         <section className="w-full flex flex-col items-center p-4 sm:gap-16 gap-0">
@@ -139,13 +171,13 @@ export default function Page() {
             </h2>
           </div>
           <div className="grid grid-cols-2 gap-x-8 w-full max-w-3xl px-4 items-center justify-center">
-            {/*<a href="https://www.inesctec.pt" target="_blank">
+            <a href="https://www.inesctec.pt" target="_blank">
               <Image
                 src={inesctec}
                 alt="Inesctec logo"
                 className="object-contain col-span-1 w-full h-auto"
               />
-            </a>*/}
+            </a>
             <a href="https://www.mauser.pt" target="_blank">
               <Image
                 src={mauser}
@@ -171,14 +203,35 @@ export default function Page() {
               <Image
                 src={lojaIndustria}
                 alt="Loja Industria logo"
-                className="object-contain col-span-1 w-full h-auto  lg:-my-16 md:-my-12 sm:-my-8 -my-6"
+                className="object-contain col-span-1 w-full h-auto  lg:-mt-6 md:-mt-4 sm:-mt-3 -mt-2"
+              />
+            </a>
+            <a href="https://amobgroup.com/pt-pt" target="_blank">
+              <Image
+                src={amob}
+                alt="Amob logo"
+                className="object-contain col-span-1 w-full h-auto  lg:-mt-6 md:-mt-4 sm:-mt-3 -mt-2"
+              />
+            </a>
+            <a href="https://www.antoniomoutinho.pt" target="_blank">
+              <Image
+                src={antonio}
+                alt="Antonio Moutinho logo"
+                className="object-contain col-span-1 w-full h-auto   lg:mt-6 md:mt-4 sm:mt-3 mt-2"
+              />
+            </a>
+            <a href="https://www.isma.pt" target="_blank">
+              <Image
+                src={isma}
+                alt="ISMA logo"
+                className="object-contain col-span-1 w-full h-auto   lg:mt-6 md:mt-4 sm:mt-3 mt-2"
               />
             </a>
             <a href="https://biogerm.pt" className="col-span-2" target="_blank">
               <Image
                 src={biogerm}
                 alt="Biogerm logo"
-                className="object-contain  w-full h-auto invert-100 lg:max-w-[180px] md:max-w-[160px] sm:max-w-[140px] max-w-[120px] mx-auto lg:-mt-16 md:-mt-12 sm:-mt-8 -mt-6 lg:-mb-8 md:-mb-6 sm:-mb-4 -mb-2"
+                className="object-contain  w-full h-auto invert-100 lg:max-w-[180px] md:max-w-[160px] sm:max-w-[140px] max-w-[120px] mx-auto lg:-mt-12 md:-mt-10 sm:-mt-8 -mt-6 lg:-mb-8 md:-mb-6 sm:-mb-4 -mb-2"
               />
             </a>
           </div>
@@ -218,6 +271,20 @@ export default function Page() {
               <Image
                 src={cheto}
                 alt="Cheto logo"
+                className="object-contain col-span-1 w-full h-auto lg:max-w-[240px] md:max-w-[220px] sm:max-w-[200px] max-w-[180px] mx-auto"
+              />
+            </a>
+            <a href="https://www.oriontechnik.com" target="_blank">
+              <Image
+                src={orion}
+                alt="Orion logo"
+                className="object-contain col-span-1 w-full h-auto lg:max-w-[200px] md:max-w-[180px] sm:max-w-[160px] max-w-[140px] mx-auto"
+              />
+            </a>
+            <a href="https://www.gleal.pt/pt/home/index" target="_blank">
+              <Image
+                src={gleal}
+                alt="GLeal logo"
                 className="object-contain col-span-1 w-full h-auto lg:max-w-[240px] md:max-w-[220px] sm:max-w-[200px] max-w-[180px] mx-auto"
               />
             </a>
