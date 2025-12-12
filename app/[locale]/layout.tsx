@@ -74,6 +74,10 @@ export const metadata: Metadata = {
   ],
 };
 
+export const generateStaticParams = () => {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
